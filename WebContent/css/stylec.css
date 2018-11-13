@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+.bg{
+    height: 100%;
+    width: 100vw;
+    background-image: url("https://lh3.googleusercontent.com/4aiJRV1afak3SR1P2Bq_cnLb_S8UvWcpezcV7Ulsy_faspEqga9Kw-eDhsrFVpRY77mszdh6-7SBmit-msmo1YLUU2Z7gYFhmQhQ=w1280-h721-rw-no");
+    background-size: calc(100% + 170px);
+}
+
+.corpoLogin{
+    padding: 10px 10px 10px 10px;
+    background-color: white;
+    opacity: 0.9;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.corpoLogin .logo{
+    padding: 2px 0px 10px 0; 
+    text-align: center;
+}
+
+.corpoCadastro{
+    padding: 10px 10px 10px 10px;
+    background-color: white;
+    opacity: 0.9;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px black;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.corpoCadastro .logo{
+    padding: 2px 0px 10px 0; 
+    text-align: center;
+}
+
+
+/*   BOTÕES   */
+
+.botoes a{
+    text-decoration: none;
+}
+
+.botaoVerde{
+    background-color: #006400;
+    color: #fff;
+    border: solid #008000 1px;
+    text-align: center;
+
+}
+
+.botaoVerde:hover{
+    background-color: #008000;
+    color: #fff;
+    border: solid #008000 1px;
+}
+
+.botaoCinza{
+    margin-top: 10px;
+    background-color: #27292c;
+    color: #fff;
+    border: solid #696969 1px;
+    text-align: center;
+}
+
+.botaoCinza:hover{
+    background-color: #3c3f44;
+    border: solid #696969 1px;
+}
+
+/*   FOOTER   */
+
+.footer {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    bottom: 0;
+    
+    text-align: center;
+    background-color: #006400;
+    color: #fff;
+    height: auto;
+    width: 100%;
+
+    clear:both;
+
+}
+
+.footer a{
+	color: #01DF01;
+}
+
+
+

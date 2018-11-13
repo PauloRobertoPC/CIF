@@ -1,0 +1,1366 @@
+body{
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	background-color: #003300;
+	margin: 0 0 0 0;
+}
+
+.bg{
+	height: 100%;
+	width: 100vw;
+	background-image: url("https://lh3.googleusercontent.com/JVPmkKcZgLS0nwK321FaddBmCY6w7l7EiRnkRwmX_oV3iQCIEUigcNjzsEDDsUdpGBjW0RbYTadpQTaRaqlRWlZqIdskRla-6Hey=w1145-h721-rw-no");
+	background-size: calc(100% + 150px);
+	background-attachment: fixed;
+
+}
+
+
+
+/*   NAVBAR   */
+
+.navbar{
+	background-color: #006400;
+	overflow: hidden;
+	height: 60px;
+	top: 0;
+	left: 0;
+	box-shadow: 0px 0px 5px #111;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.navbar a{
+	float: left;
+	display: block;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.navbar ul{
+	padding: 8px 0 0 0;
+	list-style: none;
+}
+
+.navbar #logo{
+	display: block;
+	padding-right:50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*   MENU   */
+
+.botaoMenu{
+	margin-left: -15px;
+	margin-top: 6px;
+}
+
+.side-nav{
+	box-shadow: 0px 0px 18px #383838;
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	overflow-x: hidden;
+	padding-top: 60px;
+	transition: 0.2s;
+}
+
+.side-nav a{
+	padding: 15px 10px 15px 31px;
+	text-decoration: none;
+	
+}
+
+.side-nav h1{
+	font-weight: bold;
+	position: absolute;
+	color: #006400;
+	top: 12px;
+	left: 60px;
+	font-size: 30px;
+}
+
+.side-nav .btn-close{
+	position: absolute;
+	top: 0px;
+	left: -14px;
+	margin-right: 50px;
+}
+
+.side-nav .Items{
+	margin-top: 10px;
+}
+
+.side-nav .iconeMenu{
+	margin-top: 10px;
+	margin-bottom: -15px;
+	padding-left: 18px;
+}
+
+.side-nav .iconeMenu a{
+	margin-top: -48px;
+	margin-left: 10px;
+}
+
+/*   ITENS DO MENU   */
+
+.verdeItems{
+	background: #F5F5F5;
+}
+
+.verdeItems a{
+	font-size: 22px;
+	color: #006400;
+	display: block;
+	text-align: left;
+	opacity: 1;
+}
+
+.verdeItems a:hover{
+	color: #00a100;
+}
+
+.cinzaItems{
+	margin-bottom: 120px;
+}
+
+.cinzaItems a{
+	font-size: 22px;
+	color: #333;
+	display: block;
+	text-align: left;
+	opacity: 1;
+}
+
+.cinzaItems a:hover{
+	color: #747474;
+}
+
+.foot{
+	font-size: 10px;
+	padding-bottom: 10px;
+	margin-left: 40%;
+	bottom: 0px;
+	position: relative; 
+
+}
+
+
+/*   TUTORIAL   */
+.janelaTutor{
+	padding: 20px 20px 20px 20px;
+
+	margin-top: 0px;
+	margin-bottom: 30px;
+	margin-right: 0px;
+	margin-left: 0px;
+
+
+	background: #fff;
+	border-radius: 5px;
+	border: 1px solid #C0C0C0;
+	border-bottom: solid #808080 2.2px;
+}
+
+.janelasT{
+	padding-top: 10px;
+	margin-top: 0px;
+}
+
+/*  CONTEÚDO   */
+
+
+
+.janelaEscala{
+	padding-right: -10px;
+}
+
+.janelaEscala h2{
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 40px;
+	font-weight: bold;
+	color: #383838;
+	padding-left: 5px;
+}
+
+.janelas{
+	padding-top: 10px;
+	margin-top: 60px;
+}
+
+.janelas h2{
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 40px;
+	font-weight: bold;
+	color: #fff	;
+	padding-left: 5px;
+}
+
+.janelas h6{
+	font-size: 30px;
+	font-weight: bold;
+	color: #383838;
+}
+
+.janelaTexto{
+	padding: 10px 0px 10px 0px;
+
+
+	margin-top: 10px;
+	margin-bottom: 30px;
+	margin-right: 0px;
+	margin-left: 0px;
+
+
+	background: #fff;
+	border-radius: 5px;
+	border: 1px solid #C0C0C0;
+	border-bottom: solid #808080 2.2px;
+}
+
+.janelaImagem{
+	padding: 10px 0px 10px 0px;
+
+
+	margin-top: 10px;
+	margin-bottom: 30px;
+	margin-right: 0px;
+	margin-left: 0px;
+
+
+	background: #fff;
+	border-radius: 5px;
+	border: 1px solid #C0C0C0;
+	border-bottom: solid #808080 2.2px;
+}
+
+.janelaT{
+	padding: 10px 0px 10px 0px;
+
+
+	margin-top: 80px;
+	margin-bottom: 30px;
+	margin-right: 0px;
+	margin-left: 0px;
+
+
+	background: #fff;
+	border-radius: 5px;
+	border: 1px solid #C0C0C0;
+	border-bottom: solid #808080 2.2px;
+}
+
+.janelaT1{
+	padding: 5px 0px 10px 0px;
+
+
+	margin-top: 10px;
+	margin-bottom: 30px;
+	margin-right: 0px;
+	margin-left: 0px;
+
+
+	background: #fff;
+	border-radius: 5px;
+	border: 1px solid #C0C0C0;
+	border-bottom: solid #808080 2.2px;
+}
+
+/*   Tabelas COM foto dos jogadores   */
+
+.tabelaImagem{
+	margin-right: 20px;
+	margin-left: 20px;
+	height: auto;
+	margin-top: 25px;
+	margin-bottom: 10px;
+	border-bottom: solid #DCDCDC 2.2px;
+}
+
+.janelaImagem h1{
+	color: #006400;
+	font-size: 40px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+.janelaImagem h3{
+	color: #282828;
+	font-weight: bold;
+	margin-top: -75px;
+	margin-left: 160px;
+}
+
+.janelaImagem h4{
+	color: #282828;
+	font-size: 18px;
+	margin-left: 160px;
+	margin-bottom: 25px;
+}
+
+.fotosJog{
+	background-color: #aaa;
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
+	overflow: hidden;
+	position: relative;
+	margin-top: -70px;
+	margin-left: 50px;
+
+	border: 1px solid #DCDCDC;
+}
+
+.fotosJog img{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.rodapeJanelaIMG{
+	margin-left: 20px;
+
+}
+
+.rodapeJanelaIMG a{
+	color: #006400;
+	font-weight: bold;
+}
+
+.rodapeJanelaIMG a:hover{
+	color: #00a100;
+	text-decoration-line: none;
+}
+
+/*Tabelas SEM foto dos jogadores*/
+
+.tabelaTexto{
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-top: 0px;
+	height: auto;
+	margin-top: 25px;
+	border-bottom: solid #DCDCDC 2.2px;
+}
+
+.janelaTexto h1{
+	color: #006400;
+	font-size: 40px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+.janelaTexto h3{
+	color: #282828;
+	font-weight: bold;
+	margin-top: -65px;
+	margin-left: 50px;
+
+}
+
+.janelaTexto h4{
+	font-size: 20px;
+	margin-left: 50px;
+}
+
+.janelaTexto h5{
+	color: #006400;
+	font-weight: bold;
+	font-size: 20px;
+	margin-top: -50px;
+	text-align: left;
+	margin-left: 180px;
+
+	margin-bottom: 40px;
+}
+
+.rodapeJanelaTXT{
+	margin-left: 20px;
+	padding-top: 10px;
+
+}
+
+.rodapeJanelaTXT a{
+
+	color: #006400;
+	font-weight: bold;
+}
+
+.rodapeJanelaTXT a:hover{
+	color: #00a100;
+	text-decoration-line: none;
+}
+
+/*   Pagina Vazia   */
+
+.janelaVazia{
+	padding: 75px 0px 0px 0px;
+
+	background: #f0f0f0;
+
+	margin-top: 10px;
+	margin-bottom: 30px;
+	margin-right: 0px;
+	margin-left: 0px;
+
+	height: 370px;
+
+	border-radius: 5px;
+	border-bottom: solid #808080 2.2px;
+	color: #A9A9A9;
+	
+}
+
+.janelaVazia img{
+	margin-bottom: 10px;
+}
+
+.texto{
+	margin-left: -10px;
+	font-size: 20px;
+
+}
+
+.rodapeJanelaVazia{
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	background: #fff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.rodapeJanelaVazia a{
+	margin-left: 20px;
+	
+	color: #006400;
+	font-weight: bold;
+}
+
+.rodapeJanelaVazia a:hover{
+	color: #00a100;
+	text-decoration-line: none;
+}
+
+/*   VENCEDORES   */
+
+.janelaT1 h6{
+	font-size: 20px;
+	font-style: italic;
+	color: #006400;
+	text-shadow: -1px 0 #009900, 0 2px #009900, 1px 0 #009900, 0 -1px #009900;
+}	
+
+.janelaT1 h5{
+	font-size: 25px;
+	color: #004d00;
+	font-weight: bold;
+	text-shadow: -1px 0 #009900, 0 1px #009900, 1px 0 #009900, 0 -1px #009900;
+}	
+.janelaT1 h4{
+	font-size: 18px;
+	color: #009900;
+	font-weight: bold;
+}	
+
+/*   PERFIL   */
+
+.tabelaPerfil{
+	margin-right: 20px;
+	margin-left: 20px;
+	height: auto;
+	margin-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: solid #DCDCDC 2.2px;
+}
+
+.janelaPerfil{
+	padding: 0px 0px 10px 0px;
+
+	margin-top: 0px;
+	margin-bottom: 30px;
+	margin-right: 0px;
+	margin-left: 0px;
+	
+	
+	background: #fff;
+	border-radius: 5px;
+	border: 1px solid #C0C0C0;
+	border-bottom: solid #808080 2.2px;
+}
+
+.janelaPerfil h1{
+	text-align: center;
+	color: #000;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+.rodapePerfil{
+	margin-left: 20px;
+	margin-right: 20px;
+	padding-top: 10px;
+	margin-bottom: -5px;
+
+}
+
+.rodapePerfil a{
+
+	color: #006400;
+	font-weight: bold;
+}
+
+.rodapePerfil a:hover{
+	color: #00a100;
+	text-decoration-line: none;
+}
+
+/*   LIGAS   */
+
+.tabelaLigas{
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-top: 0px;
+	height: auto;
+	margin-top: 25px;
+	border-bottom: solid #DCDCDC 2.2px;
+}
+
+.janelaLigas{
+	padding: 10px 0px 10px 0px;
+
+	margin-top: 10px;
+	margin-bottom: 30px;
+	margin-right: 0px;
+	margin-left: 0px;
+	
+	
+	background: #fff;
+	border-radius: 5px;
+	border: 1px solid #C0C0C0;
+	border-bottom: solid #808080 2.2px;
+}
+
+.janelaLigas h1{
+	text-align: center;
+	color: #000;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+.botoesL a{
+	text-decoration: none;
+}
+
+.btnL_verde{
+	background-color: #006400;
+	color: #fff;
+	border: solid #008000 1px;
+	text-align: center;
+}
+
+.btnL_verde:hover{
+	background-color: #008000;
+	color: #fff;
+	border: solid #008000 1px;
+}
+
+.btnL_vermelho{
+	background-color: #990000;
+	color: #fff;
+	border: solid #cc0000 1px;
+	text-align: center;
+}
+
+.btnL_vermelho:hover{
+	background-color: #cc0000;
+	color: #fff;
+	border: solid #cc0000 1px;
+}
+
+.btnL_cinza{
+	background-color: #3c3f44;
+	color: #fff;
+	border: solid #696969 1px;
+	text-align: center;
+}
+
+.btnL_cinza:hover{
+	background-color: #54585f;
+	border: solid #696969 1px;
+}
+
+.caixaTxt{
+	padding-left: 5px;
+	border-radius: 5px;
+	border:1px solid #A9A9A9;
+}
+
+/*   VER LIGA   */
+
+.janelaVerLiga{
+	padding: 0px 0px 10px 0px;
+
+
+	margin-bottom: 30px;
+	margin-right: 0px;
+	margin-left: 0px;
+	
+	
+	background: #fff;
+	border-radius: 5px;
+	border: 1px solid #C0C0C0;
+	border-bottom: solid #808080 2.2px;
+}
+
+.janelaVerLiga h1{
+	color: #006400;
+	font-size: 40px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+.janelaVerLiga h3{
+	color: #282828;
+	font-weight: bold;
+	margin-top: -65px;
+	margin-left: 50px;
+}
+
+.janelaVerLiga h4{
+	font-size: 20px;
+	margin-left: 52px;
+}
+
+.janelaVerLiga h5{
+	color: #006400;
+	font-weight: bold;
+	font-size: 20px;
+	margin-top: -50px;
+	text-align: left;
+	margin-left: 180px;
+
+	margin-bottom: 40px;
+}
+
+.tabelaLiga{
+	margin-right: 20px;
+	margin-left: 20px;
+	height: auto;
+	margin-top: 25px;
+	margin-bottom: 10px;
+	border-bottom: solid #DCDCDC 2.2px;
+}
+
+.fotoVerLiga{
+	margin-right: 15px;
+	background-color: #aaa;
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
+	overflow: hidden;
+	position: relative;
+	border: 1px solid #DCDCDC;
+}
+
+.fotoVerLiga img{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.rodapeVliga{
+	margin-left: 20px;
+	margin-right: 20px;
+
+}
+
+.rodapeVliga a{
+	color: #006400;
+	font-weight: bold;
+}
+
+.rodapeVliga a:hover{
+	color: #00a100;
+	text-decoration-line: none;
+}
+
+/*   ESCALAĆ‡ĆO   */
+
+.janelaQuadra{
+	padding: 0px 0px 0px 0px;
+
+	margin-bottom: 30px;
+	margin-right: 0px;
+	margin-left: 0px;
+	margin-top: 30px;
+}
+
+.janelaQuadra img{
+	max-width: 100%;
+}
+
+.fotopequena{
+	background-color: #aaa;
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
+	overflow: hidden;
+	position: relative;
+	margin-top: 0px;
+	margin-left: 0px;
+	border: solid #fff 2px;
+	box-shadow: 0px 0px 10px #000;
+
+}
+
+.fotopequena img{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.fotopequenaT{
+	background-color: #006400;
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
+	overflow: hidden;
+	position: relative;
+	margin-top: 0px;
+	margin-left: 0px;
+	border: solid #00b300 2px;
+	box-shadow: 0px 0px 10px #000;
+
+}
+
+.fotopequenaT img{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.fotoTabela{
+	background-color: #aaa;
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 5px;
+	margin-top: 5px;
+
+	border: 1px solid #DCDCDC;
+}
+
+.fotoTabela img`{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+table#alter tr.topo th {
+	background: #fff; /* Linhas com fundo cinza */
+}
+
+table#alter tr td { /* Toda a tabela com fundo creme */
+	background: #fff;
+} 
+table#alter tr.dif td {
+	background: #eee; /* Linhas com fundo cinza */
+}
+
+
+
+.tabelaQuadra{
+	margin-right: 10px;
+	margin-left: 10px;
+	height: auto;
+	margin-bottom: 0px;			  	
+}
+
+.tabelaT{
+	margin-right: 0px;
+	margin-left: 0px;
+	height: auto;
+	margin-top: 0px;
+	margin-bottom: 5px;
+
+	padding-bottom: 0px;
+	border-bottom: solid #DCDCDC 2.2px;
+}
+
+.botoesT a{
+	text-decoration: none;
+}
+
+.botaoT{
+	background-color: #006400;
+	color: #fff;
+	border: solid #008000 1px;
+	text-align: center;
+}
+
+.botaoT:hover{
+	background-color: #008000;
+	color: #fff;
+	border: solid #008000 1px;
+}
+
+.rodapeJanelaEscala{
+	padding-top: 5px;
+	margin-left: 20px;
+}
+
+.rodapeJanelaEscala a{
+	color: #006400;
+	font-weight: bold;
+}
+
+.rodapeJanelaEscala a:hover{
+	color: #00a100;
+	text-decoration-line: none;
+}
+
+
+@media screen and (max-width: 2000px) {
+	#pivo{
+		position:absolute;z-index: 1px; top:30%; left:45%;
+	}
+
+	#alae{
+		position:absolute;z-index: 10px; top:50%; left:11%;
+	}
+
+	#alad{
+		position:absolute;z-index: 10px; top:50%; left:70%;
+	}
+
+	#fixo{
+		position:absolute;z-index: 10px; top:60%; left:45%;
+	}
+
+	#goleiro{
+		position:absolute;z-index: 10px; top:75%; left:42%;
+	}
+
+	#tecnico{
+		position:absolute;z-index: 10px; top:77%; left:8%;
+	}
+}
+
+@media screen and (max-width: 1210px) {
+	#pivo{
+		position:absolute;z-index: 1px; top:30%; left:45%;
+	}
+
+	#alae{
+		position:absolute;z-index: 10px; top:45%; left:11%;
+	}
+
+	#alad{
+		position:absolute;z-index: 10px; top:45%; left:68%;
+	}
+
+	#fixo{
+		position:absolute;z-index: 10px; top:54%; left:45%;
+	}
+
+	#goleiro{
+		position:absolute;z-index: 10px; top:65%; left:42%;
+	}
+
+	#tecnico{
+		position:absolute;z-index: 10px; top:68%; left:8%;
+	}
+
+}
+
+@media screen and (max-width: 1130px) {
+	#pivo{
+		position:absolute;z-index: 1px; top:25%; left:45%;
+	}
+
+	#alae{
+		position:absolute;z-index: 10px; top:40%; left:11%;
+	}
+
+	#alad{
+		position:absolute;z-index: 10px; top:40%; left:68%;
+	}
+
+	#fixo{
+		position:absolute;z-index: 10px; top:48%; left:45%;
+	}
+
+	#goleiro{
+		position:absolute;z-index: 10px; top:60%; left:42%;
+	}
+
+	#tecnico{
+		position:absolute;z-index: 10px; top:63%; left:8%;
+	}
+
+}
+
+
+
+@media screen and (max-width: 1040px) {
+	#pivo{
+		position:absolute;z-index: 1px; top:25%; left:42%;
+	}
+	
+	#alae{
+		position:absolute;z-index: 10px; top:38%; left:11%;
+	}
+
+	#alad{
+		position:absolute;z-index: 10px; top:38%; left:66%;
+	}
+
+	#fixo{
+		position:absolute;z-index: 10px; top:45%; left:42%;
+	}
+
+	#goleiro{
+		position:absolute;z-index: 10px; top: 56%; left:40%;
+	}
+
+	#tecnico{
+		position:absolute;z-index: 10px; top:58%; left:8%;
+	}
+
+	.fotopequena{
+		background-color: #aaa;
+		border-radius: 50%;
+		width: 70px;
+		height: 70px;
+		overflow: hidden;
+		position: relative;
+		margin-top: 0px;
+		margin-left: 0px;
+		border: solid #fff 2px;
+		box-shadow: 0px 0px 10px #000;
+
+	}
+
+	.fotopequena img{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+
+	.fotopequenaT{
+		background-color: #006400;
+		border-radius: 50%;
+		width: 70px;
+		height: 70px;
+		overflow: hidden;
+		position: relative;
+		margin-top: 0px;
+		margin-left: 0px;
+		border: solid #00b300 2px;
+		box-shadow: 0px 0px 10px #000;
+
+	}
+
+	.fotopequenaT img{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+}
+@media screen and (max-width: 991px) {
+	#pivo{
+		position:absolute;z-index: 1px; top:35%; left:45%;
+	}
+
+	#alae{
+		position:absolute;z-index: 10px; top:55%; left:11%;
+	}
+
+	#alad{
+		position:absolute;z-index: 10px; top:55%; left:74%;
+	}
+
+	#fixo{
+		position:absolute;z-index: 10px; top:65%; left:45%;
+	}
+
+	#goleiro{
+		position:absolute;z-index: 10px; top: 82%; left:42%;
+	}
+
+	#tecnico{
+		position:absolute;z-index: 10px; top:85%; left:8%;
+	}
+
+	.fotopequena{
+		background-color: #aaa;
+		border-radius: 50%;
+		width: 120px;
+		height: 120px;
+		overflow: hidden;
+		position: relative;
+		margin-top: 0px;
+		margin-left: 0px;
+		border: solid #fff 2px;
+		box-shadow: 0px 0px 10px #000;
+
+	}
+
+	.fotopequena img{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+
+	.fotopequenaT{
+		background-color: #006400;
+		border-radius: 50%;
+		width: 120px;
+		height: 120px;
+		overflow: hidden;
+		position: relative;
+		margin-top: 0px;
+		margin-left: 0px;
+		border: solid #00b300 2px;
+		box-shadow: 0px 0px 10px #000;
+
+	}
+
+	.fotopequenaT img{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 660px) {
+	#pivo{
+		position:absolute;z-index: 1px; top:35%; left:45%;
+	}
+
+	#alae{
+		position:absolute;z-index: 10px; top:55%; left:11%;
+	}
+
+	#alad{
+		position:absolute;z-index: 10px; top:55%; left:74%;
+	}
+
+	#fixo{
+		position:absolute;z-index: 10px; top:65%; left:45%;
+	}
+
+	#goleiro{
+		position:absolute;z-index: 10px; top: 82%; left:42%;
+	}
+
+	#tecnico{
+		position:absolute;z-index: 10px; top:84%; left:8%;
+	}
+
+	.fotopequena{
+		background-color: #aaa;
+		border-radius: 50%;
+		width: 80px;
+		height: 80px;
+		overflow: hidden;
+		position: relative;
+		margin-top: 0px;
+		margin-left: 0px;
+		border: solid #fff 2px;
+		box-shadow: 0px 0px 10px #000;
+
+	}
+
+	.fotopequena img{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+
+	.fotopequenaT{
+		background-color: #006400;
+		border-radius: 50%;
+		width: 80px;
+		height: 80px;
+		overflow: hidden;
+		position: relative;
+		margin-top: 0px;
+		margin-left: 0px;
+		border: solid #00b300 2px;
+		box-shadow: 0px 0px 10px #000;
+
+	}
+
+	.fotopequenaT img{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+}
+@media screen and (max-width: 414px) {
+	#pivo{
+		position:absolute;z-index: 1px; top:35%; left:45%;
+	}
+
+	#alae{
+		position:absolute;z-index: 10px; top:55%; left:11%;
+	}
+
+	#alad{
+		position:absolute;z-index: 10px; top:55%; left:69%;
+	}
+
+	#fixo{
+		position:absolute;z-index: 10px; top:65%; left:45%;
+	}
+
+	#goleiro{
+		position:absolute;z-index: 10px; top: 80%; left:42%;
+	}
+
+	#tecnico{
+		position:absolute;z-index: 10px; top:82%; left:8%;
+	}
+
+	.fotopequena{
+		background-color: #aaa;
+		border-radius: 50%;
+		width: 80px;
+		height: 80px;
+		overflow: hidden;
+		position: relative;
+		margin-top: 0px;
+		margin-left: 0px;
+		border: solid #fff 2px;
+		box-shadow: 0px 0px 10px #000;
+
+	}
+
+	.fotopequena img{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+
+	.fotopequenaT{
+		background-color: #006400;
+		border-radius: 50%;
+		width: 80px;
+		height: 80px;
+		overflow: hidden;
+		position: relative;
+		margin-top: 0px;
+		margin-left: 0px;
+		border: solid #00b300 2px;
+		box-shadow: 0px 0px 10px #000;
+
+	}
+
+	.fotopequenaT img{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 340px) {
+	#pivo{
+		position:absolute;z-index: 1px; top:35%; left:45%;
+	}
+
+	#alae{
+		position:absolute;z-index: 10px; top:55%; left:13%;
+	}
+
+	#alad{
+		position:absolute;z-index: 10px; top:55%; left:66%;
+	}
+
+	#fixo{
+		position:absolute;z-index: 10px; top:65%; left:45%;
+	}
+
+	#goleiro{
+		position:absolute;z-index: 10px; top: 79%; left:42%;
+	}
+
+	#tecnico{
+		position:absolute;z-index: 10px; top:81%; left:10%;
+	}
+
+
+	.fotopequena{
+		background-color: #aaa;
+		border-radius: 50%;
+		width: 70px;
+		height: 70px;
+		overflow: hidden;
+		position: relative;
+		margin-top: 0px;
+		margin-left: 0px;
+		border: solid #fff 2px;
+		box-shadow: 0px 0px 10px #000;
+
+	}
+
+	.fotopequena img{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+
+	.fotopequenaT{
+		background-color: #006400;
+		border-radius: 50%;
+		width: 70px;
+		height: 70px;
+		overflow: hidden;
+		position: relative;
+		margin-top: 0px;
+		margin-left: 0px;
+		border: solid #00b300 2px;
+		box-shadow: 0px 0px 10px #000;
+
+	}
+
+	.fotopequenaT img{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+
+}
+
+
+/*   GUIA DE JOGOS   */
+
+.janelaGuia{
+	padding: 0px 0px 10px 0px;
+
+	margin-top: 10px;
+	margin-bottom: 30px;
+	margin-right: 0px;
+	margin-left: 0px;
+
+
+	background: #fff;
+	border-radius: 5px;
+	border: 1px solid #C0C0C0;
+	border-bottom: solid #808080 2.2px;
+}
+
+.janelaGuia h1{
+	color:#202020;
+	font-size: 35px; 
+}
+
+.linhaGuia{
+	height: auto;
+	margin-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: solid #DCDCDC 2.2px;
+}
+
+.fotoGuia{
+	background-color: #aaa;
+	border-radius: 50%;
+	width: 90px;
+	height: 90px;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 5px;
+	margin-top: 5px;
+
+	border: 1px solid #DCDCDC;
+	border: solid #fff 2px;
+	box-shadow: 0px 0px 0px 1px #A9A9A9;
+}
+
+.fotoGuia img{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.rodapeGuia{
+	margin-left: 20px;
+	padding-top: 10px;
+}
+
+/*   CRUDS   */
+
+.janelaCRUD{
+	padding: 20px 20px 10px 20px;
+
+	margin-top: 0px;
+	margin-bottom: 30px;
+	margin-right: 0px;
+	margin-left: 0px;
+	
+	
+	background: #fff;
+	border-radius: 5px;
+	border: 1px solid #C0C0C0;
+	border-bottom: solid #808080 2.2px;
+
+}
+
+.CRUDdentro{
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	border-bottom: solid #DCDCDC 2px;
+}
+
+.CRUDdentro a{
+	color: #006400;
+	font-weight: bold;
+}
+
+.CRUDdentro a:hover{
+	color: #00a100;
+	text-decoration-line: none;
+}
+
+.rodapeCRUD{
+	margin-left: 0px;
+	margin-right: 0px;
+
+}
+
+.rodapeCRUD a{
+	color: #006400;
+	font-weight: bold;
+}
+
+.rodapeCRUD a:hover{
+	color: #00a100;
+	text-decoration-line: none;
+}
+
+/*   FOOTER   */
+
+.footer {
+	padding-top: 12px;
+	padding-bottom: 12px;
+
+	text-align: center;
+	background-color: #006400;
+	color: #fff;
+	height: auto;
+	width: 100%;
+
+	clear:both;
+
+}
+
+.footer a{
+	color: #01DF01;
+}
