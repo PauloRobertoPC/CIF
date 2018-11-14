@@ -17,7 +17,7 @@
 		crossorigin="anonymous">
 		<link rel="shortcut icon" type="image/x-png" href="imagens/favicon.png">
 	<link rel="stylesheet" href="css/style.css">
-	<title>CRUD Usuários</title>
+	<title>CRUD Usuário</title>
 </head>
 <body>
 <%
@@ -153,7 +153,9 @@
                 <option value="1">Adminstrador</option>
                 <option value="2">Organizador</option>
                 <option value="3">Comum</option>
-              </select></br>  
+              </select><br><br>
+              
+              <b>Email: </b> <input type="text" class="caixaTxt" id="ncemail"><br>
 
 
 
@@ -196,9 +198,9 @@
                   <option value="1">Adminstrador</option>
                   <option value="2">Organizador</option>
                   <option value="3">Comum</option>
-                </select></br>
+                </select></br><br>
 
-
+				<b>Email: </b> <input type="text" class="caixaTxt" id="emailusuario"><br>
 
               </div>
 
@@ -227,7 +229,7 @@
                     <th>Cartoleiro</th>
                     <th>Curso</th>
                     <th>Tipo</th>
-                    <th></th>
+                    <th>Email</th>
                   </tr>
 				<%
 					UsuarioDAO ud = new UsuarioDAO();
@@ -249,6 +251,7 @@
 						out.println("<td>"+lu.get(c).getNomeCartoleiro()+"</td>");
 						out.println("<td>"+cd.selectAll("WHERE idCurso = '"+lu.get(c).getCursoUsuario()+"'").get(0).getNomeCurso()+"</td>");
 						out.println("<td>"+lu.get(c).getidTipoUsuario()+"</td>");
+						out.println("<td>"+lu.get(c).getEmail()+"</td>");
 						out.println("<input type='hidden' class='idu' value='"+lu.get(c).getIdUsuario()+"'>");
 						out.println("<input type='hidden' class='nu' value='"+lu.get(c).getNomeUsuario()+"'>");
 						out.println("<input type='hidden' class='lu' value='"+lu.get(c).getLogin()+"'>");
@@ -257,6 +260,7 @@
 						out.println("<input type='hidden' class='ncu' value='"+lu.get(c).getNomeCartoleiro()+"'>");
 						out.println("<input type='hidden' class='cu' value='"+lu.get(c).getCursoUsuario()+"'>");
 						out.println("<input type='hidden' class='idtu' value='"+lu.get(c).getidTipoUsuario()+"'> ");
+						out.println("<input type='hidden' class='ide' value='"+lu.get(c).getEmail()+"'> ");
 						out.println("<td><button ontype='button' class='btn btn-primary' data-toggle='modal' data-target='#myModal' onclick=\"enviarModal('"+c+"')\">Editar/Apagar</button></td>");
 						out.println("</tr>");
 						c++;
@@ -358,7 +362,8 @@
       var senhausuario = document.getElementById("senhausuario").value;
       var cursousuario = document.getElementById("cursousuario").value;
       var tipousuario = document.getElementById("tipousuario").value;
-      $.get("Crud?opcao=5&operacao=1&nome="+nomeusuario+"&login="+loginusuario+"&curso="+cursousuario+"&tipousuario="+tipousuario+"&senha="+senhausuario, function(data) {
+      var email = document.getElementById("emailusuario").value;
+      $.get("Crud?opcao=5&operacao=1&nome="+nomeusuario+"&login="+loginusuario+"&curso="+cursousuario+"&tipousuario="+tipousuario+"&senha="+senhausuario+"&email="+email, function(data) {
         //alert( "Data Loaded: " + data );
       });
     }
@@ -372,6 +377,7 @@
       var id = document.getElementsByClassName("idu");
       var cu = document.getElementsByClassName("cu");
       var idt = document.getElementsByClassName("idtu");
+      var nce = document.getElementsByClassName("ide");
       document.getElementById("nuv").value = nu[indice].value;
       document.getElementById("luv").value = lu[indice].value;
       document.getElementById("suv").value = su[indice].value;
@@ -380,6 +386,7 @@
       document.getElementById("iduv").value = id[indice].value;
       document.getElementById("cuv").value = cu[indice].value;
       document.getElementById("idtuv").value = idt[indice].value;
+      document.getElementById("ncemail").value = nce[indice].value;
     }
     
     function editar(){
@@ -391,9 +398,10 @@
       var id = document.getElementById("iduv").value;
       var cu = document.getElementById("cuv").value;
       var idt = document.getElementById("idtuv").value;
-      $.get("Crud?opcao=5&operacao=2&nome="+nu+"&login="+lu+"&curso="+cu+"&tipousuario="+idt+"&nometime="+nt+"&nomecartoleiro="+nc+"&id="+id+"&senha="+su, function(data) {
-        //alert( "Data Loaded: " + data );
-      });
+      var email = document.getElementById("ncemail").value;
+      $.get("Crud?opcao=5&operacao=2&nome="+nu+"&login="+lu+"&curso="+cu+"&tipousuario="+idt+"&nometime="+nt+"&nomecartoleiro="+nc+"&id="+id+"&senha="+su+"&email="+email, function(data) {
+          //alert( "Data Loaded: " + data );
+        });
     }
     
     function apagar(){

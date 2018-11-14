@@ -9,7 +9,19 @@ public class Usuario {
     private String nomeCartoleiro;
     private int cursoUsuario;
     private int idTipoUsuario;
+    private String email;
 
+    public Usuario(String nomeUsuario, String login, String senha, String nomeTime, String nomeCartoleiro, int cursoUsuario, int idTipoUsuario, String email) {
+        this.nomeUsuario = nomeUsuario;
+        this.login = login;
+        this.senha = senha;
+        this.nomeTime = nomeTime;
+        this.nomeCartoleiro = nomeCartoleiro;
+        this.cursoUsuario = cursoUsuario;
+        this.idTipoUsuario = idTipoUsuario;
+        this.email = email;
+    }
+    
     public Usuario(String nomeUsuario, String login, String senha, String nomeTime, String nomeCartoleiro, int cursoUsuario, int idTipoUsuario) {
         this.nomeUsuario = nomeUsuario;
         this.login = login;
@@ -26,6 +38,15 @@ public class Usuario {
         this.senha = senha;
         this.cursoUsuario = cursoUsuario;
         this.idTipoUsuario = idTipoUsuario;
+    }
+    
+    public Usuario(String nomeUsuario, String login, String senha, int cursoUsuario, int idTipoUsuario, String email) {
+        this.nomeUsuario = nomeUsuario;
+        this.login = login;
+        this.senha = senha;
+        this.cursoUsuario = cursoUsuario;
+        this.idTipoUsuario = idTipoUsuario;
+        this.email = email;
     }
     
     public Usuario(String nomeUsuario, String login, String senha, String nomeTime, String nomeCartoleiro, int cursoUsuario) {
@@ -104,6 +125,14 @@ public class Usuario {
         this.idTipoUsuario = idTipoUsuario;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
     @Override
     public String toString() {
         return "Usuario{" + "idUsuario=" + idUsuario + ", nomeUsuario=" + nomeUsuario + ", login=" + login + ", senha=" + senha + ", nomeTime=" + nomeTime + ", nomeCartoleiro=" + nomeCartoleiro + ", cursoUsuario=" + cursoUsuario + "idTipoUsuario" +idTipoUsuario+'}';

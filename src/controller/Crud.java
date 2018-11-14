@@ -208,7 +208,8 @@ public class Crud extends HttpServlet {
 				String senha = request.getParameter("senha");
 				int curso = Integer.parseInt(request.getParameter("curso"));
 				int idtipousuario = Integer.parseInt(request.getParameter("tipousuario"));
-				Usuario u = new Usuario(nome, login, senha, curso, idtipousuario);
+				String email = request.getParameter("email");
+				Usuario u = new Usuario(nome, login, senha, curso, idtipousuario, email);
 				try {
 					UsuarioDAO ud = new UsuarioDAO();
 					if(ud.selectAll("WHERE login = '"+login+"'").size() == 0){
@@ -236,7 +237,8 @@ public class Crud extends HttpServlet {
 				int curso = Integer.parseInt(request.getParameter("curso"));
 				int idtipousuario = Integer.parseInt(request.getParameter("tipousuario"));
 				int id = Integer.parseInt(request.getParameter("id"));
-				Usuario u = new Usuario(nome, login, senha, nometime, nomecartoleiro,curso, idtipousuario);
+				String email = request.getParameter("email"); 
+				Usuario u = new Usuario(nome, login, senha, nometime, nomecartoleiro,curso, idtipousuario, email);
 				u.setIdUsuario(id);
 				try {
 					UsuarioDAO ud = new UsuarioDAO();

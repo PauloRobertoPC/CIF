@@ -36,12 +36,24 @@
 
                 <input type="text" class="form-control " id="exampleFormControlInput1" placeholder="Ex: Seu_nome" name="nome">
               </div>
-
+			  
+			  <div class="form-group align ">
+                <label for="exampleFormControlInput1">Email</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ex: meuemail@gmail.com" name="email">
+              	<%
+              		String modal = request.getParameter("modal");
+              		if(modal != null){
+              			if(modal.equals("2")){
+              				out.println("<span style='color: red;'>Email já cadastrado!</span>");
+              			}
+              		}
+              	%>
+              </div>
+			  
               <div class="form-group align ">
                 <label for="exampleFormControlInput1">Login</label>
                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ex: Nome_de_usuario" name="login">
               	<%
-              		String modal = request.getParameter("modal");
               		if(modal != null){
               			if(modal.equals("1")){
               				out.println("<span style='color: red;'>Login já existente!</span>");

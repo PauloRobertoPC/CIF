@@ -42,8 +42,9 @@ public class Cadastrar extends HttpServlet {
 		String nome = request.getParameter("nome");
 		String login = request.getParameter("login");
 		String senha = request.getParameter("senha");
+		String email = request.getParameter("email");
 		int curso = Integer.parseInt(request.getParameter("curso"));
-		Usuario u = new Usuario(nome, login, senha, "", "", curso, 3);
+		Usuario u = new Usuario(nome, login, senha, "", "", curso, 3, email);
 		
 		try {
 			UsuarioDAO udao = new UsuarioDAO();
@@ -53,16 +54,21 @@ public class Cadastrar extends HttpServlet {
 				response.sendRedirect("TelaCadastro.jsp?modal=1");
 				udao.closeDataBase();
 			}else {
-				udao.insertIntoNull(u);
-				int idUser = udao.selectAll("WHERE login = '"+login+"'").get(0).getIdUsuario();
-				udao.closeDataBase();
-				LigaUsuario lu = new LigaUsuario(idUser, 7);
-				LigaUsuario lc = new LigaUsuario(idUser, curso);
-				LigaUsuarioDAO ludao = new LigaUsuarioDAO();
-				ludao.insertInto(lu);
-				ludao.insertInto(lc);
-				ludao.closeDataBase();
-				response.sendRedirect("TelaLogin.jsp?modal=3");
+				if(udao.selectAll("WHERE email = '"+email+"'").size() == 1) {
+					response.sendRedirect("TelaCadastro.jsp?modal=2");
+					udao.closeDataBase();
+				}else {
+					udao.insertIntoNull(u);
+					int idUser = udao.selectAll("WHERE login = '"+login+"'").get(0).getIdUsuario();
+					udao.closeDataBase();
+					LigaUsuario lu = new LigaUsuario(idUser, 7);
+					LigaUsuario lc = new LigaUsuario(idUser, curso);
+					LigaUsuarioDAO ludao = new LigaUsuarioDAO();
+					ludao.insertInto(lu);
+					ludao.insertInto(lc);
+					ludao.closeDataBase();
+					response.sendRedirect("TelaLogin.jsp?modal=3");
+				}
 			}
 			
 		} catch (SQLException e) {

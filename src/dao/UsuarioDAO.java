@@ -41,6 +41,48 @@ public class UsuarioDAO {
         }
     }
     
+    public boolean insertIntoEmail(Usuario u){
+        String sql = "INSERT INTO usuarios " + 
+                "(nomeUsuario, login, senha, nomeTime, nomeCartoleiro, cursoUsuario, idTipoUsuario, email) values " + 
+                "(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        PreparedStatement stmt = null;
+        try{
+           stmt = conn.prepareStatement(sql); 
+           stmt.setString(1, u.getNomeUsuario());
+           stmt.setString(2, u.getLogin());
+           stmt.setString(3, u.getSenha());
+           stmt.setString(4, u.getNomeTime());
+           stmt.setString(5, u.getNomeCartoleiro());
+           stmt.setInt(6, u.getCursoUsuario());
+           stmt.setInt(7, u.getidTipoUsuario());
+           stmt.setString(8, u.getEmail());
+           stmt.executeUpdate();
+           return true;
+        }catch(SQLException ex){
+            System.err.println("Erro: "+ ex);
+            return false;
+        }
+    }
+    
+    public ArrayList<Usuario> selectAllEmail(){
+        String sql = "select * from usuarios";
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        ArrayList<Usuario> lista = new ArrayList<Usuario>();
+        try{
+            stmt = conn.prepareStatement(sql);
+            rs = stmt.executeQuery();
+            while(rs.next()){
+                Usuario u = new Usuario(rs.getString("nomeUsuario"), rs.getString("login"), rs.getString("senha"), rs.getString("nomeTime"), rs.getString("nomeCartoleiro"),rs.getInt("cursoUsuario"), rs.getInt("idTipoUsuario"), rs.getString("email"));
+                u.setIdUsuario(rs.getInt("idUsuario"));
+                lista.add(u);
+            }
+        }catch(SQLException ex){
+            System.err.println("Erro: "+ ex);
+        }
+        return lista;
+    }
+    
     public ArrayList<Usuario> selectAll(){
         String sql = "select * from usuarios";
         PreparedStatement stmt = null;
@@ -62,8 +104,8 @@ public class UsuarioDAO {
     
     public boolean insertIntoNull(Usuario u){
         String sql = "INSERT INTO usuarios " + 
-                "(nomeUsuario, login, senha, nomeTime, nomeCartoleiro, cursoUsuario, idTipoUsuario) values " + 
-                "(?, ?, ?, null, null, ?, ?)";
+                "(nomeUsuario, login, senha, nomeTime, nomeCartoleiro, cursoUsuario, idTipoUsuario, email) values " + 
+                "(?, ?, ?, null, null, ?, ?, ?)";
         PreparedStatement stmt = null;
         try{
            stmt = conn.prepareStatement(sql); 
@@ -72,6 +114,7 @@ public class UsuarioDAO {
            stmt.setString(3, u.getSenha());
            stmt.setInt(4, u.getCursoUsuario());
            stmt.setInt(5, u.getidTipoUsuario());
+           stmt.setString(6, u.getEmail());
            stmt.executeUpdate();
            return true;
         }catch(SQLException ex){
@@ -115,7 +158,7 @@ public class UsuarioDAO {
             stmt = conn.prepareStatement(sql);
             rs = stmt.executeQuery();
             while(rs.next()){
-                Usuario u = new Usuario(rs.getString("nomeUsuario"), rs.getString("login"), rs.getString("senha"), rs.getString("nomeTime"), rs.getString("nomeCartoleiro"),rs.getInt("cursoUsuario"), rs.getInt("idTipoUsuario"));
+                Usuario u = new Usuario(rs.getString("nomeUsuario"), rs.getString("login"), rs.getString("senha"), rs.getString("nomeTime"), rs.getString("nomeCartoleiro"),rs.getInt("cursoUsuario"), rs.getInt("idTipoUsuario"), rs.getString("email"));
                 u.setIdUsuario(rs.getInt("idUsuario"));
                 lista.add(u);
             }
@@ -141,7 +184,7 @@ public class UsuarioDAO {
     }
     
     public boolean update(Usuario u){
-        String sql = "UPDATE usuarios SET nomeUsuario = ?, login = ?, senha = ?, nomeTime = ?, nomeCartoleiro = ?, cursoUsuario = ?, idTipoUsuario = ? WHERE idUsuario = ?";
+        String sql = "UPDATE usuarios SET nomeUsuario = ?, login = ?, senha = ?, nomeTime = ?, nomeCartoleiro = ?, cursoUsuario = ?, idTipoUsuario = ?, email= ? WHERE idUsuario = ?";
         PreparedStatement stmt = null;
         try{
            stmt = conn.prepareStatement(sql); 
@@ -152,7 +195,8 @@ public class UsuarioDAO {
            stmt.setString(5, u.getNomeCartoleiro());
            stmt.setInt(6, u.getCursoUsuario());
            stmt.setInt(7, u.getidTipoUsuario());
-           stmt.setInt(8, u.getIdUsuario());
+           stmt.setString(8, u.getEmail());
+           stmt.setInt(9, u.getIdUsuario());
            stmt.executeUpdate();
            return true;
         }catch(SQLException ex){

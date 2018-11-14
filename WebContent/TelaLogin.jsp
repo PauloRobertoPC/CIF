@@ -51,12 +51,13 @@
                 <%
 					if (modal != null) {
 						if (modal.equals("2")) {
-							out.println("<span style='color: red;'>Senha Incorreta!</span>");
+							out.println("<span style='color: red;'>Senha Incorreta!</span><br>");
 						}
 					}
 				%>
-              </diV>
-
+				<a href="recuperarsenha.jsp">Recuperar Senha</a>
+              </div>
+			  
               <div class="botoes"><button type="submit" class="botaoVerde btn mb-2 btn-block">Entrar</button></div>
 
               <center> Ou </center>
