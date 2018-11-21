@@ -99,6 +99,7 @@ public class Escalar extends HttpServlet {
 			trd.insertInto(tr5);
 			trd.insertInto(tr6);*/
 			trd.closeDataBase();
+			response.sendRedirect("MostrarJogadores.jsp");
 		} catch (SQLException e1) {
 			e1.printStackTrace();
 		} catch (ParseException e) {

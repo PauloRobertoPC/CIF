@@ -243,8 +243,8 @@
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary"
 							data-dismiss="modal">Fechar</button>
-						<button type="button" class="btn btn-success"
-							onclick="escalarTime()">Confirmar</button>
+						<a><button type="button" class="btn btn-success"
+							onclick="escalarTime()">Confirmar</button></a>
 					</div>
 				</div>
 			</div>

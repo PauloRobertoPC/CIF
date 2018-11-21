@@ -143,12 +143,16 @@
 	            out.println("<h4>"+topLista.get(c).getNomeTime()+"</h4>");
 	            out.println("<h5>"+topLista.get(c).getPontuacao()+" pontos</h5>");
 	            out.println("</div>");
+	            out.println("<hr style='height:2px; border:none; background-color:#DCDCDC;  margin-right: 20px; margin-left: 20px; margin-top: 77px; margin-bottom: 0px;'/>");
 	        }
+	        
 	        c++;
 	    }
 	    out.println("<div class=\"rodapeVLiga\">");
 	    if(liga > 7){
 	    	out.println("<a href='SairDaLiga?usuario="+u.getIdUsuario()+"&liga="+liga+"'><button type='button' class='btnL_vermelho btn btn-danger btn-block'>Sair da Liga</button></a>");	
+	    }else{
+	    	out.println("<a href='Ligas.jsp'><button type='button' class='btnL_vermelho btn btn-danger btn-block'>Voltar</button></a>");
 	    }
 	    out.println("</div>");
 	    out.println("</div>");
