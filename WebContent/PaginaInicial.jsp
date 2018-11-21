@@ -162,7 +162,7 @@
                     c++;
                     out.println("</div>");
                 }
-                out.println("<div class='rodapeJanelaTXT'><a href='#'>ESCALE SEUS JOGADORES</a></div>");
+                out.println("<div class='rodapeJanelaTXT'><a href='RankingTR.jsp'>VER RANKING COMPLETO</a></div>");
                 out.println("</div>");
                 out.println("</div>");
             }
@@ -195,7 +195,7 @@
                     c++;
                     out.println("</div>");
                 }
-                out.println("<div class='rodapeJanelaIMG'><a href='#'>ESCALE SEUS JOGADORES</a></div>");
+                out.println("<div class='rodapeJanelaIMG'><a href='RankingPP.jsp'>VER RANKING COMPLETO</a></div>");
                 out.println("</div>");
                 out.println("</div>");
             }
@@ -228,7 +228,7 @@
                     c++;
                     out.println("</div>");
                 }
-                out.println("<div class='rodapeJanelaIMG'><a href='#'>ESCALE SEUS JOGADORES</a></div>");
+                out.println("<div class='rodapeJanelaIMG'><a href='RankingPR.jsp'>VER RANKING COMPLETO</a></div>");
                 out.println("</div>");
                 out.println("</div>");
             }
@@ -241,48 +241,56 @@
                 Mestre do Campeanato: Usuário que somou mais pontos em todo o campeonato*/
             
             //Papa ponto
+			out.println("<div class='container col-sm-12 col-lg-8 col-xl-6'>");
+			out.println("<div class='row'>");
             out.println("<div class='container col-sm-12 col-lg-8 col-xl-6'>");
-        	out.println("<h2>PREMIAÇÕES</h2>");
-        	out.println("<div class='janelaT1'>");
-        	out.println("<div class='table-responsive'>");
-        	out.println("<table  cellpadding='5px' cellspacing='0' ID='alter' style= 'text-align: center; width: 100%;'>");
-        	out.println("<tr class='topo'>");
-        	out.println("<th>Ganhador</th>");
-        	out.println("<th>Nome</th>");
-        	out.println("<th>Quantidade</th>");
-        	out.println("<th>Troféu</th>");
-        	out.println("</tr>");
+        	out.println("<div class='cardzin'>");
+        	out.println("<div class='navb'><h2>Papa Ponto</h2></div>");
+        	out.println("<img src='imagens/a3.png'>");
+        	out.println("<center><div class='conteudo'>");
             Top t = jd.papaPonto();
             Jogador j1 = jd.selectAll("WHERE idJogador = '"+t.getIdGuambiarra()+"'").get(0);
         	String cursos = util.tratarPasta(cdao.selectAll("WHERE idCurso ='"+j1.getCursoJogador()+"'").get(0).getNomeCurso());
-        	out.println("<tr class='dif'>");
-        	out.println("<td><img class='fotoTabela img-fluid' alt='Responsive image' src='imagens/jogadores/"+cursos+"/"+t.getNomeTime()+"'></td>");
-        	out.println("<td><b>"+t.getNome()+"</b></td>");
-        	out.println("<td>"+util.pontoFlutuante(t.getPontuacao(), 2)+" Pontos</td>");
-        	out.println("<td>Papa Ponto</td>");
-            out.println("</tr>");
+        	//out.println("<td><img class='fotoTabela img-fluid' alt='Responsive image' src='imagens/jogadores/"+cursos+"/"+t.getNomeTime()+"'></td>");
+        	out.println("<h3 class='titulo'>"+t.getNome()+"</h3>");
+        	out.println("<span class='texto'>"+util.pontoFlutuante(t.getPontuacao(), 2)+" Pontos</span>");
+        	out.println("<img class='imgem' src='imagens/trofeu.png' style='heigth: 50%; width: 50%;'>");
+        	out.println("</div>");
+        	out.println("</div></center>");
+        	out.println("</div>");
             //Popularidade
             t = jd.popularidade();
             //j1 = jd.selectAll("WHERE idJogador = '"+t.getIdGuambiarra()+"'").get(0);
+            out.println("<div class= 'container col-sm-12 col-lg-8 col-xl-6'>");
+            out.println("<div class='cardzin'>");
+            out.println("<div class='navb'><h2>Popularidade</h2></div>");
+            out.println("<img src='imagens/a3.png'>");
+            out.println("<center><div class='conteudo'>");
         	cursos = util.tratarPasta(cdao.selectAll("WHERE idCurso ='"+t.getIdGuambiarra()+"'").get(0).getNomeCurso());
-            out.println("<tr>");
-            out.println("<td><img class='fotoTabela' src='imagens/jogadores/"+cursos+"/"+t.getNomeTime()+"'></td>");
-            out.println("<td><b>"+t.getNome()+"</b></td>");
-            out.println("<td>"+util.pontoFlutuante(t.getPontuacao(), 0)+" Escalações</td>");
-            out.println("<td>Popularidade</td>");
-            out.println("</tr>");
+            //out.println("<td><img class='fotoTabela' src='imagens/jogadores/"+cursos+"/"+t.getNomeTime()+"'></td>");
+            out.println("<h3 class='titulo'>"+t.getNome()+"</h3>");
+            out.println("<span class='texto'>"+util.pontoFlutuante(t.getPontuacao(), 0)+" Escalações</span>");
+            out.println("<img class='imgem' src='imagens/trofeu.png' style='height: 50%; width: 50%;' >");
+            out.println("</div>");
+            out.println("</div></center>");
+            out.println("</div>");
             //Mestre do Campeonato
             t = ud.mestreDoCampeonato();
-            out.println("<tr class='dif'>");
-            out.println("<td>"+t.getNomeTime()+"</td>");
-            out.println("<td><b>"+t.getNome()+"</b></td>");
-            out.println("<td>"+util.pontoFlutuante(t.getPontuacao(), 2)+" Pontos</td>");
-            out.println("<td>Mestre do Campeoato</td>");
-            out.println("</tr>");
-            out.println("</table>");
+            out.println("<div class= 'container col-sm-12 col-lg-8 col-xl-6'>");
+            out.println("<div class='cardzin'>");
+            out.println("<div class='navb'><h2>Mestre do campeonato</h2></div>");
+            out.println("<img src='imagens/a3.png'>");
+            out.println("<center><div class='conteudo'>");
+            out.println("<h3 class='titulo'>"+t.getNomeTime()+"</h3>");
+            out.println("<span class='texto'>"+t.getNome()+"</span>");
+            out.println("<span class='texto'>"+util.pontoFlutuante(t.getPontuacao(), 2)+" Pontos</span>");
+            out.println("<img class='imgem' src='imagens/trofeu.png' style='height: 50%; width: 50%;'' >");
+            out.println("</div>");
+            out.println("</div></center>");
             out.println("</div>");
             out.println("</div>");
             out.println("</div>");
+            
         }
         ud.closeDataBase();
         jd.closeDataBase();

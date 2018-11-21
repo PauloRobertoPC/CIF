@@ -1,4 +1,4 @@
-body{
+﻿body{
 	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 	background-color: #003300;
 	margin: 0 0 0 0;
@@ -12,8 +12,6 @@ body{
 	background-attachment: fixed;
 
 }
-
-
 
 /*   NAVBAR   */
 
@@ -150,31 +148,7 @@ body{
 
 }
 
-
-/*   TUTORIAL   */
-.janelaTutor{
-	padding: 20px 20px 20px 20px;
-
-	margin-top: 0px;
-	margin-bottom: 30px;
-	margin-right: 0px;
-	margin-left: 0px;
-
-
-	background: #fff;
-	border-radius: 5px;
-	border: 1px solid #C0C0C0;
-	border-bottom: solid #808080 2.2px;
-}
-
-.janelasT{
-	padding-top: 10px;
-	margin-top: 0px;
-}
-
 /*  CONTEÚDO   */
-
-
 
 .janelaEscala{
 	padding-right: -10px;
@@ -298,7 +272,7 @@ body{
 
 .janelaImagem h4{
 	color: #282828;
-	font-size: 18px;
+	font-size: 20px;
 	margin-left: 160px;
 	margin-bottom: 25px;
 }
@@ -689,7 +663,7 @@ body{
 	text-decoration-line: none;
 }
 
-/*   ESCALAĆ‡ĆO   */
+/*   ESCALAÇÃO   */
 
 .janelaQuadra{
 	padding: 0px 0px 0px 0px;
@@ -1038,6 +1012,18 @@ table#alter tr.dif td {
 		bottom: 0;
 		width: 100%;
 	}
+
+	.janelaT {
+		padding: 10px 0px 10px 0px;
+		margin-top: 0px;
+		margin-bottom: 30px;
+		margin-right: 0px;
+		margin-left: 0px;
+		background: #fff;
+		border-radius: 5px;
+		border: 1px solid #C0C0C0;
+		border-bottom: solid #808080 2.2px;
+	}
 }
 
 @media screen and (max-width: 660px) {
@@ -1104,7 +1090,20 @@ table#alter tr.dif td {
 		bottom: 0;
 		width: 100%;
 	}
+	
+	.janelaT {
+		padding: 10px 0px 10px 0px;
+		margin-top: 0px;
+		margin-bottom: 30px;
+		margin-right: 0px;
+		margin-left: 0px;
+		background: #fff;
+		border-radius: 5px;
+		border: 1px solid #C0C0C0;
+		border-bottom: solid #808080 2.2px;
+	}
 }
+
 @media screen and (max-width: 414px) {
 	#pivo{
 		position:absolute;z-index: 1px; top:35%; left:45%;
@@ -1169,9 +1168,92 @@ table#alter tr.dif td {
 		bottom: 0;
 		width: 100%;
 	}
+
+	.janelaT {
+		padding: 10px 0px 10px 0px;
+		margin-top: 0px;
+		margin-bottom: 30px;
+		margin-right: 0px;
+		margin-left: 0px;
+		background: #fff;
+		border-radius: 5px;
+		border: 1px solid #C0C0C0;
+		border-bottom: solid #808080 2.2px;
+	}
 }
 
 @media screen and (max-width: 340px) {
+	
+	.janelaImagem h1{
+		color: #006400;
+		font-size: 30px;
+		font-weight: bold;
+		margin-top: 20px;
+	}
+
+	.janelas h2{
+		font-size:30px;
+		font-weight: bold;
+	}
+
+	.janelaImagem h3{
+		font-size:20px;
+		color: #282828;
+		font-weight: bold;
+		margin-top: -75px;
+		margin-left: 140px;
+	}
+
+	.janelaImagem h4{
+		color: #282828;
+		font-size: 16px;
+		margin-left: 140px;
+		margin-bottom: 35px;
+	}
+
+	.fotosJog{
+		background-color: #aaa;
+		border-radius: 50%;
+		width: 80px;
+		height: 80px;
+		overflow: hidden;
+		position: relative;
+		margin-top: -60px;
+		margin-left: 35px;
+
+		border: 1px solid #DCDCDC;
+	}
+
+	.janelaTexto h1{
+		color: #006400;
+		font-size: 30px;
+		font-weight: bold;
+		margin-top: 20px;
+	}
+
+	.janelaTexto h3{
+		font-size:20px;
+		color: #282828;
+		font-weight: bold;
+		margin-top: -55px;
+		margin-left: 50px;
+	}
+
+	.janelaTexto h4{
+		font-size: 18px;
+		margin-left: 50px;
+	}
+
+	.janelaTexto h5{
+		color: #006400;
+		font-weight: bold;
+		font-size: 18px;
+		margin-top: -50px;
+		margin-left: 180px;
+		margin-bottom: 40px;
+	}
+
+
 	#pivo{
 		position:absolute;z-index: 1px; top:35%; left:45%;
 	}
@@ -1235,6 +1317,18 @@ table#alter tr.dif td {
 		position: absolute;
 		bottom: 0;
 		width: 100%;
+	}
+
+	.janelaT {
+		padding: 10px 0px 10px 0px;
+		margin-top: 0px;
+		margin-bottom: 30px;
+		margin-right: 0px;
+		margin-left: 0px;
+		background: #fff;
+		border-radius: 5px;
+		border: 1px solid #C0C0C0;
+		border-bottom: solid #808080 2.2px;
 	}
 
 }
@@ -1343,6 +1437,93 @@ table#alter tr.dif td {
 .rodapeCRUD a:hover{
 	color: #00a100;
 	text-decoration-line: none;
+}
+
+/*   TROFÉUS   */
+
+.completo{
+
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.cardzin{
+	position:relative;
+	margin-top: ;
+	margin-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.cardzin:before{
+	width:0;
+	height:200%;
+	background:rgba(0,0,0,.5);
+	position:absolute;top:0;
+	left:-250px;
+	bottom:0;
+	transform:skewX(-36deg);
+	transition:all .5s ease 0s;
+}
+
+.cardzin:hover:before{
+	width:200%;
+}
+
+.cardzin img{
+	width:100%;
+	height:auto;
+
+}
+
+.cardzin .conteudo {
+
+	width:100%;
+	height:100%;
+	padding-top:20%;
+	position:absolute;
+	top:0;
+	left:0;
+	transform:scale(0);
+	transition:all .3s ease 0s;
+	background-color: rgba(255,255,255,0.9);
+	border-radius: 15px;
+}
+
+
+.cardzin:hover .conteudo{
+	transform:scale(1);
+}
+
+.cardzin .titulo{
+	font-size:50px;
+	font-weight:700;
+	color:#000;
+	margin:-10px 0 0px;
+	z-index: 100;
+}
+
+.cardzin .texto{
+	display:block;
+	font-size:20px;
+	font-weight:600;
+	color:#000;
+	z-index: 100;
+}
+
+.retangulo1{
+	font-size: 20px;
+	color: white;
+
+	background: ;
+}
+
+.retangulo2{
+	background: ;
+}
+
+.retangulo3{
+	background: ;
 }
 
 /*   FOOTER   */

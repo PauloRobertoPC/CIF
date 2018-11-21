@@ -238,7 +238,7 @@ public class UsuarioDAO {
     public ArrayList<Top> top3Rodada(int rodada){
         String sql = "select usuarios.nomeCartoleiro, usuarios.nomeTime,sum(rodadajogador.pontuacao) as pontuacao from usuarios, jogadores, rodadajogador, timerodada\n" +
                      "where (usuarios.idUsuario = timerodada.idUsuario) and (jogadores.idJogador = timerodada.idJogador) and (rodadaJogador.idJogador = timerodada.idJogador) and (rodadaJogador.idRodada = '"+rodada+"') and (timeRodada.idRodada = '"+rodada+"')\n" +
-                     "group by usuarios.nomeUsuario;";
+                     "group by usuarios.nomeUsuario order by pontuacao desc;";
         PreparedStatement stmt = null;
         ResultSet rs = null;
         ArrayList<Top> lista = new ArrayList<Top>();
@@ -248,12 +248,34 @@ public class UsuarioDAO {
             rs = stmt.executeQuery();
             while(c <= 2){
                 if (rs.next()){
-                    Top t = new Top(rs.getString("nomeCartoleiro"), rs.getString("nomeTime"),(rs.getFloat("pontuacao")/6));
+                    Top t = new Top(rs.getString("nomeCartoleiro"), rs.getString("nomeTime"),(rs.getFloat("pontuacao")));
                     lista.add(t);
                     c++;
                 }else {
                     c = 3;
                 }
+            }
+            return lista;
+        }catch(SQLException ex){
+            System.err.println("Erro: "+ ex);
+        }
+            return lista;
+    }
+    
+    public ArrayList<Top> topTimes(int rodada){
+        String sql = "select usuarios.nomeCartoleiro, usuarios.nomeTime,sum(rodadajogador.pontuacao) as pontuacao from usuarios, jogadores, rodadajogador, timerodada\n" +
+                     "where (usuarios.idUsuario = timerodada.idUsuario) and (jogadores.idJogador = timerodada.idJogador) and (rodadaJogador.idJogador = timerodada.idJogador) and (rodadaJogador.idRodada = '"+rodada+"') and (timeRodada.idRodada = '"+rodada+"')\n" +
+                     "group by usuarios.nomeUsuario order by pontuacao desc;";
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        ArrayList<Top> lista = new ArrayList<Top>();
+        try{
+            
+            stmt = conn.prepareStatement(sql);
+            rs = stmt.executeQuery();
+            while(rs.next()){
+            	Top t = new Top(rs.getString("nomeCartoleiro"), rs.getString("nomeTime"),(rs.getFloat("pontuacao")));
+                lista.add(t);
             }
             return lista;
         }catch(SQLException ex){

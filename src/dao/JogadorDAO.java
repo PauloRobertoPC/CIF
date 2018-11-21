@@ -149,6 +149,28 @@ public class JogadorDAO {
             return lista;
     }
     
+    public ArrayList<Top> topRodada(int rodada){
+        String sql = "select jogadores.nomeJogador, jogadores.imagem,rodadaJogador.pontuacao, jogadores.idJogador from jogadores, rodadaJogador\n" +
+                     "where (jogadores.idJogador = rodadaJogador.idJogador) and (rodadaJogador.idRodada = "+rodada+") and (jogadores.posicao != 'Técnico')\n" +
+                     "group by(jogadores.nomeJogador)\n" +
+                     "order by pontuacao desc";
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        ArrayList<Top> lista = new ArrayList<Top>();
+        try{
+            stmt = conn.prepareStatement(sql);
+            rs = stmt.executeQuery();
+            while(rs.next()){
+            	Top t = new Top(rs.getString("nomeJogador"), rs.getString("imagem"), rs.getFloat("pontuacao"), rs.getInt("idJogador"));
+                lista.add(t);
+            }
+            return lista;
+        }catch(SQLException ex){
+            System.err.println("Erro: "+ ex);
+        }
+            return lista;
+    }
+    
     /*public HashMap top3Geral(){
         String sql = "select jogadores.nomeJogador, rodadaJogador.pontuacao from jogadores, rodadaJogador\n" +
                      "where (jogadores.idJogador = rodadaJogador.idJogador)\n" +
@@ -204,6 +226,29 @@ public class JogadorDAO {
             return lista;
     }
     
+    public ArrayList<Top> top3EscaladosRodada(int rodada){
+        String sql = "select jogadores.nomeJogador, jogadores.imagem, count(*) as participacoes, jogadores.idJogador from timeRodada, jogadores\n" +
+                    "where (idRodada = '"+rodada+"') and (jogadores.idJogador = timeRodada.idJogador) and (jogadores.posicao != 'Técnico')\n" +
+                    "group by timeRodada.idJogador\n" +
+                    "order by participacoes desc";
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        ArrayList<Top> lista = new ArrayList<Top>();
+        try{
+            stmt = conn.prepareStatement(sql);
+            rs = stmt.executeQuery();
+            while(rs.next()){
+                    Top t = new Top(rs.getString("nomeJogador"), rs.getString("imagem"), rs.getFloat("participacoes"), rs.getInt("idJogador"));
+                    lista.add(t);
+               
+            }
+            return lista;
+        }catch(SQLException ex){
+            System.err.println("Erro: "+ ex);
+        }
+            return lista;
+    }
+    
    private int totalDeRodadasParticipantes(int id){
         String sql = "select count(*) as total from rodadaJogador where (idJogador = "+id+")";
         PreparedStatement stmt = null;
@@ -221,10 +266,7 @@ public class JogadorDAO {
     }
    
     public Top papaPonto(){
-        String sql = "select jogadores.nomeJogador, jogadores.imagem, sum(rodadaJogador.pontuacao) as pontuacao, jogadores.idJogador from jogadores, rodadaJogador\n" +
-                     "where (jogadores.idJogador = rodadaJogador.idJogador)\n" +
-                     "group by(jogadores.nomeJogador)\n" +
-                     "order by (pontuacao) desc limit 1";
+        String sql = "select jogadores.nomeJogador, jogadores.imagem, sum(rodadaJogador.pontuacao) as pontuacao, jogadores.idJogador from jogadores, rodadaJogador where (jogadores.idJogador = rodadaJogador.idJogador) and (jogadores.posicao != 'Técnico') group by(jogadores.nomeJogador) order by (pontuacao) desc limit 1";
         PreparedStatement stmt = null;
         ResultSet rs = null;
         try{
@@ -240,7 +282,7 @@ public class JogadorDAO {
     }
     
     public Top popularidade() throws SQLException{
-        String sql = "select idJogador, count(*) as total from timeRodada group by (idJogador)";
+        String sql = "select timeRodada.idJogador, count(*) as total from timeRodada, jogadores WHERE (timerodada.idJogador = jogadores.idJogador) and (jogadores.posicao != 'Técnico') group by (idJogador)";
         PreparedStatement stmt = null;
         ResultSet rs = null;
         int idMaior = 0;

@@ -5,6 +5,7 @@ body{
 }
 
 .bg{
+    margin: 0;
     height: 100%;
     width: 100vw;
     background-image: url("https://lh3.googleusercontent.com/4aiJRV1afak3SR1P2Bq_cnLb_S8UvWcpezcV7Ulsy_faspEqga9Kw-eDhsrFVpRY77mszdh6-7SBmit-msmo1YLUU2Z7gYFhmQhQ=w1280-h721-rw-no");
@@ -42,7 +43,7 @@ body{
 }
 
 
-/*   BOTÃ•ES   */
+/*   BOTÕES   */
 
 .botoes a{
     text-decoration: none;
@@ -75,6 +76,77 @@ body{
     border: solid #696969 1px;
 }
 
+/*   RECUPERA SENHA    */
+
+.janelota{
+    padding-top: 10px;
+}
+
+.janelota h2{
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff ;
+    padding-left: 5px;
+}
+
+.janelota h6{
+    font-size: 30px;
+    font-weight: bold;
+    color: #383838;
+}
+
+.janelaSenha{
+    padding: 0px 0px 10px 0px;
+
+    margin-top: 0px;
+    margin-bottom: 30px;
+    margin-right: 0px;
+    margin-left: 0px;
+    
+    
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #C0C0C0;
+    border-bottom: solid #808080 2.2px;
+}
+
+.janelaSenha h1{
+    text-align: center;
+    color: #000;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.tabelaSenha{
+    margin-right: 20px;
+    margin-left: 20px;
+    height: auto;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: solid #DCDCDC 2.2px;
+}
+
+.rodapeSenha{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 10px;
+    margin-bottom: -5px;
+
+}
+
+.rodapeSenha a{
+
+    color: #006400;
+    font-weight: bold;
+}
+
+.rodapeSenha a:hover{
+    color: #00a100;
+    text-decoration-line: none;
+}
+
+
 /*   FOOTER   */
 
 .footer {
@@ -95,6 +167,3 @@ body{
 .footer a{
 	color: #01DF01;
 }
-
-
-
