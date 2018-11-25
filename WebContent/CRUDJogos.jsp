@@ -84,8 +84,7 @@
               <div class="iconeMenu"><img src="imagens/icones/Logout.png" height="30" width="30"><a href="Sair">Sair</a></div>
 
             </div>
-            <div class="foot">CIF - v3.0
-            </div>
+
           </nav>
         </a>
       </div>
@@ -177,8 +176,8 @@
 
             <div class="modal-footer">
               <button type="button" class="btnL_cinza btn btn-secondary" data-dismiss="modal">Fechar</button>
-              <button type="button" class="btnL_verde btn btn-primary" onclick="editar()">Editar</button>
-              <button type="button" class="btnL_vermelho btn btn-danger" onclick="apagar()">Apagar</button>
+              <a href=""><button type="button" class="btnL_verde btn btn-primary" onclick="editar()">Editar</button></a>
+              <a href=""><button type="button" class="btnL_vermelho btn btn-danger" onclick="apagar()">Apagar</button></a>
             </div>
 
           </div>
@@ -369,7 +368,7 @@
       //alert(local);
       var dh = document.getElementById("dh").value;
       //alert(dh);
-      var rodada = document.getElementById("rdd").value;
+      var rodada = document.getElementById("idRodadav").value;
       //alert(rodada);
       $.get("Crud?opcao=3&operacao=1&curso1="+curso1+"&curso2="+curso2+"&placar1="+placar1+"&placar2="+placar2+"&local="+local+"&dh="+dh+"&rodada="+rodada, function(data) {
         //alert( "Data Loaded: " + data );
@@ -412,7 +411,7 @@
       var placar2 = document.getElementById("pccv").value;
       var localizacao = document.getElementById("localizacaov").value;
       var datahora = document.getElementById("datahorav").value;
-      var idRodada = document.getElementById("idRodadav").value;
+      var idRodada = document.getElementById("rdd").value;
       $.get("Crud?opcao=3&operacao=2&idJogo="+idJogo+"&curso1="+curso1+"&curso2="+curso2+"&placar1="+placar1+"&placar2="+placar2+"&localizacao="+localizacao+"&datahora="+datahora+"&rodada="+idRodada, function(data) {
         //alert( "Data Loaded: " + data );
       });

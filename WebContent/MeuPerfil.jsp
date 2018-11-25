@@ -81,8 +81,7 @@
               <div class="iconeMenu"><img src="imagens/icones/Logout.png" height="30" width="30"><a href="Sair">Sair</a></div>
 
             </div>
-            <div class="foot">CIF - v3.0
-            </div>
+
           </nav>
         </a>
       </div>
@@ -209,7 +208,7 @@
 					int c = 0;
 					while (c < ligaParticipante.size()) {
 				    	Liga liga = ld.selectAll("WHERE idLiga = '"+ligaParticipante.get(c).getIdLiga()+"'").get(0);
-				    	out.println("Nome da Liga: "+liga.getNomeLiga());out.println("<br/>");
+				    	out.println("- "+liga.getNomeLiga());out.println("<br/>");
 				    	c++;
 						}
 					ld.closeDataBase();
@@ -248,7 +247,7 @@
                 <button type="button" class="btnL_verde btn btn-success btn-block" data-toggle="modal" data-target="#myModal">Alterar Senha</button>
               </div> 
 			  <div class="rodapePerfil">
-			  	<button type="button" class="btn btn-danger btn-block" data-toggle="modal" data-target="#myModalApagar">Apagar Conta</button>
+			  	<button type="button" class="btn btnL_vermelho btn-danger btn-block" data-toggle="modal" data-target="#myModalApagar">Apagar Conta</button>
 			  </div>	
             </div>
           </div>

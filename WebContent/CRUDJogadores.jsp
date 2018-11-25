@@ -84,8 +84,6 @@
               <div class="iconeMenu"><img src="imagens/icones/Logout.png" height="30" width="30"><a href="Sair">Sair</a></div>
 
             </div>
-            <div class="foot">CIF - v3.0
-            </div>
           </nav>
         </a>
       </div>
@@ -157,8 +155,8 @@
 
             <div class="modal-footer">
               <button type="button" class="btnL_cinza btn btn-secondary" data-dismiss="modal">Fechar</button>
-              <button type="button" class="btnL_verde btn btn-primary" onclick="editar()">Editar</button>
-              <button type="button" class="btnL_vermelho btn btn-danger" onclick="apagar()">Apagar</button>
+              <a href=""><button type="button" class="btnL_verde btn btn-primary" onclick="editar()">Editar</button></a>
+              <a href=""><button type="button" class="btnL_vermelho btn btn-danger" onclick="apagar()">Apagar</button></a>
             </div>
 
           </div>

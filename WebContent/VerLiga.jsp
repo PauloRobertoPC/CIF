@@ -82,8 +82,7 @@
               <div class="iconeMenu"><img src="imagens/icones/Logout.png" height="30" width="30"><a href="Sair">Sair</a></div>
 
             </div>
-            <div class="foot">CIF - v3.0
-            </div>
+
           </nav>
         </a>
       </div>
@@ -137,18 +136,17 @@
 	    int c1 = 0;
 	    while(c < topLista.size()){
 	        if(mapa.containsKey(topLista.get(c).getIdGuambiarra())){
-	        	out.println("<div class=\"tebelaLiga\">");
+	        	out.println("<div class='tabelaLiga'>");
 	        	out.println("<h1>"+(++c1)+"</h1>");
 	            out.println("<h3>"+topLista.get(c).getNome()+"</h3>");
 	            out.println("<h4>"+topLista.get(c).getNomeTime()+"</h4>");
 	            out.println("<h5>"+topLista.get(c).getPontuacao()+" pontos</h5>");
 	            out.println("</div>");
-	            out.println("<hr style='height:2px; border:none; background-color:#DCDCDC;  margin-right: 20px; margin-left: 20px; margin-top: 77px; margin-bottom: 0px;'/>");
 	        }
 	        
 	        c++;
 	    }
-	    out.println("<div class=\"rodapeVLiga\">");
+	    out.println("<div class=\"rodapeVliga\">");
 	    if(liga > 7){
 	    	out.println("<a href='SairDaLiga?usuario="+u.getIdUsuario()+"&liga="+liga+"'><button type='button' class='btnL_vermelho btn btn-danger btn-block'>Sair da Liga</button></a>");	
 	    }else{

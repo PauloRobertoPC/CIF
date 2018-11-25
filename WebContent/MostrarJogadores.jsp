@@ -84,8 +84,7 @@
               <div class="iconeMenu"><img src="imagens/icones/Logout.png" height="30" width="30"><a href="Sair">Sair</a></div>
 
             </div>
-            <div class="foot">CIF - v3.0
-            </div>
+
           </nav>
         </a>
       </div>
@@ -241,10 +240,10 @@
 					</div>
 					<div class="modal-body">Você deseja confirmar a escalação?</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary"
+						<button type="button" class="btn btnL_cinza btn-secondary"
 							data-dismiss="modal">Fechar</button>
-						<a><button type="button" class="btn btn-success"
-							onclick="escalarTime()">Confirmar</button></a>
+						<a><button type="button" class="btn btn-success btnL_verde"
+							onclick="escalarTime()" data-dismiss="modal">Confirmar</button></a>
 					</div>
 				</div>
 			</div>
@@ -275,7 +274,7 @@
 				curso = cdao.selectAll();
 				int c = 0;
 				while (c < v.size()) {
-					if(curso.get(v.get(c).getCursoJogador()).getEliminado() != 1){
+					if(curso.get(v.get(c).getCursoJogador() - 1).getEliminado() != 1){
 						
                     	if(c % 2 == 1){
                     		out.println("<tr class='dif'>");	
@@ -298,6 +297,9 @@
 				}
 				cdao.closeDataBase();
 				out.println("</table></div></div></div></div>");
+			}else{
+				out.println("<div class='col-sm-12 col-lg-8 col-xl-8'>");
+				out.println("</div>");
 			}
             
 		%>

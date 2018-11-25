@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import dao.CursoDAO;
 import dao.JogadorDAO;
 import dao.UsuarioDAO;
+import model.Curso;
 import model.Jogador;
 import model.Top;
 import model.Usuario;
@@ -39,7 +40,7 @@ public class Principal {
             c++;
         }*/
 		
-		Util u = new Util();
+		/*Util u = new Util();
 		CursoDAO cdao = new CursoDAO();
 		JogadorDAO jd = new JogadorDAO();
 		ArrayList<Top> lista = jd.top3EscaladosRodada(u.rodadaCorrente() - 1);
@@ -52,7 +53,24 @@ public class Principal {
         	System.out.println(lista.get(c).getNome());
         	System.out.println(u.pontoFlutuante(lista.get(c).getPontuacao(), 0)+"\n\n");
             c++;
-        }
-		
+        }*/
+
+		ArrayList<Jogador> v = new ArrayList();
+		JogadorDAO jdao = new JogadorDAO();
+		v = jdao.selectAll("ORDER BY (posicao)");
+		jdao.closeDataBase();
+		ArrayList<Curso> curso = new ArrayList();
+		CursoDAO cdao = new CursoDAO();
+		curso = cdao.selectAll();
+		int c = 0;
+		while (c < v.size()) {
+			if(curso.get(v.get(c).getCursoJogador() - 1).getEliminado() != 1){
+				System.out.println("Esse sim");
+			}else {
+				System.out.println(curso.get(v.get(c).getCursoJogador()).getEliminado());
+				System.out.println("Esse não");
+			}
+			c++;
+		}
 	}
 }
