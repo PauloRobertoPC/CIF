@@ -208,7 +208,7 @@
 					int c = 0;
 					while (c < ligaParticipante.size()) {
 				    	Liga liga = ld.selectAll("WHERE idLiga = '"+ligaParticipante.get(c).getIdLiga()+"'").get(0);
-				    	out.println("- "+liga.getNomeLiga());out.println("<br/>");
+				    	out.println("<a href='VerLiga.jsp?liga="+ligaParticipante.get(c).getIdLiga()+"'>"+liga.getNomeLiga());out.println("</a><br/>");
 				    	c++;
 						}
 					ld.closeDataBase();
@@ -235,6 +235,9 @@
 						out.println("<option value='"+listarodada.get(contador).getIdRodada()+"'>"+listarodada.get(contador).getNomeRodada()+"</option>");	
 					}
 					contador++;
+				}
+				if(util.terminou()){
+					out.println("<option value='"+listarodada.get(contador).getIdRodada()+"'>"+listarodada.get(contador).getNomeRodada()+"</option>");
 				}
 				rd.closeDataBase();
 			%>			

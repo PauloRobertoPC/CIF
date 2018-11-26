@@ -4,9 +4,11 @@ import java.util.ArrayList;
 
 import dao.CursoDAO;
 import dao.JogadorDAO;
+import dao.RodadaDAO;
 import dao.UsuarioDAO;
 import model.Curso;
 import model.Jogador;
+import model.Rodada;
 import model.Top;
 import model.Usuario;
 import util.Util;
@@ -55,7 +57,7 @@ public class Principal {
             c++;
         }*/
 
-		ArrayList<Jogador> v = new ArrayList();
+		/*ArrayList<Jogador> v = new ArrayList();
 		JogadorDAO jdao = new JogadorDAO();
 		v = jdao.selectAll("ORDER BY (posicao)");
 		jdao.closeDataBase();
@@ -71,6 +73,16 @@ public class Principal {
 				System.out.println("Esse não");
 			}
 			c++;
+		}*/
+		
+		Util util = new Util();
+		RodadaDAO rd = new RodadaDAO();
+		ArrayList<Rodada> lista = rd.selectAll();
+		rd.closeDataBase();
+		if((util.rodadaCorrente() == lista.size())) {
+			System.out.println("acabou");
+		}else {
+			System.out.println("TMJ!!");
 		}
 	}
 }

@@ -134,14 +134,26 @@
 	    int c = 0;
 	    ArrayList<Top> topLista = ud.mediaCampeonato();
 	    int c1 = 0;
+	    RodadaDAO rd = new RodadaDAO();
+		ArrayList<Rodada> lista = rd.selectAll();
+		rd.closeDataBase();
 	    while(c < topLista.size()){
 	        if(mapa.containsKey(topLista.get(c).getIdGuambiarra())){
-	        	out.println("<div class='tabelaLiga'>");
-	        	out.println("<h1>"+(++c1)+"</h1>");
-	            out.println("<h3>"+topLista.get(c).getNome()+"</h3>");
-	            out.println("<h4>"+topLista.get(c).getNomeTime()+"</h4>");
-	            out.println("<h5>"+topLista.get(c).getPontuacao()+" pontos</h5>");
-	            out.println("</div>");
+	        	if(((util.rodadaCorrente() == lista.size())) && (!util.terminou()) && (c <= 2)){
+	        		out.println("<div class='tabelaLiga'>");
+		        	out.println("<h1>"+(++c1)+"</h1>");
+		            out.println("<h3>Resultado no Encerramento</h3>");
+		            out.println("<h4>Se Prepare</h4>");
+		            out.println("<h5>Em breve</h5>");
+		            out.println("</div>");	
+	        	}else{
+	        		out.println("<div class='tabelaLiga'>");
+		        	out.println("<h1>"+(++c1)+"</h1>");
+		            out.println("<h3>"+topLista.get(c).getNome()+"</h3>");
+		            out.println("<h4>"+topLista.get(c).getNomeTime()+"</h4>");
+		            out.println("<h5>"+topLista.get(c).getPontuacao()+" pontos</h5>");
+		            out.println("</div>");
+	        	}
 	        }
 	        
 	        c++;
