@@ -48,7 +48,8 @@ public class Login implements Filter {
 				|| (req.getRequestURI().endsWith("/TelaLogin.jsp"))
 				|| (req.getRequestURI().endsWith("/TelaCadastro.jsp"))
 				|| (req.getRequestURI().endsWith("/recuperarsenha.jsp"))
-				|| (req.getRequestURI().endsWith("/RecuperarSenha"))) {
+				|| (req.getRequestURI().endsWith("/RecuperarSenha"))
+				|| (req.getRequestURI().endsWith("/Cadastrar"))) {
 			chain.doFilter(request, response);
 		}else {
 			((HttpServletResponse) response).sendRedirect("/CIF/TelaLogin.jsp");

@@ -275,7 +275,7 @@
             out.println("</div>");
             //Mestre do Campeonato
             t = ud.mestreDoCampeonato();
-            out.println("<div class= 'container col-sm-12 col-lg-8 col-xl-6'>");
+            out.println("<div class= 'container col-sm-12 col-lg-8 col-xl-12'>");
             out.println("<div class='cardzin'>");
             out.println("<div class='navb'><h2>Mestre do campeonato</h2></div>");
             out.println("<img src='imagens/a3.png'>");

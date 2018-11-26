@@ -123,11 +123,11 @@
 		Util util = new Util();
 		TimeRodadaDAO trd = new TimeRodadaDAO();
 		int rodada;
-		if(!util.terminou()){
+		//if(!util.terminou()){
 			rodada = util.rodadaCorrente();
-		}else{
-			rodada = (util.rodadaCorrente() - 1);
-		}
+		//}else{
+			//rodada = (util.rodadaCorrente() - 1);
+		//}
 		ArrayList<TimeRodada> listatr = trd.selectAll("WHERE idUsuario ='" + u.getIdUsuario()/*sessão*/
 				+ "' and idRodada = '" + rodada + "'");
 		String tecnico = "";

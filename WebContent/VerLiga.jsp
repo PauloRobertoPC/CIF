@@ -159,10 +159,9 @@
 	        c++;
 	    }
 	    out.println("<div class=\"rodapeVliga\">");
+	    out.println("<a href='Ligas.jsp'><button type='button' class='btnL_cinza btn btn-danger btn-block'>Voltar</button></a><br>");
 	    if(liga > 7){
 	    	out.println("<a href='SairDaLiga?usuario="+u.getIdUsuario()+"&liga="+liga+"'><button type='button' class='btnL_vermelho btn btn-danger btn-block'>Sair da Liga</button></a>");	
-	    }else{
-	    	out.println("<a href='Ligas.jsp'><button type='button' class='btnL_vermelho btn btn-danger btn-block'>Voltar</button></a>");
 	    }
 	    out.println("</div>");
 	    out.println("</div>");
