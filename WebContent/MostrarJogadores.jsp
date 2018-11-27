@@ -267,7 +267,7 @@
 			//Mostrar botão escalar e a tabela com os jogadores para poder escalar
 				ArrayList<Jogador> v = new ArrayList();
 				JogadorDAO jdao = new JogadorDAO();
-				v = jdao.selectAll("ORDER BY (posicao)");
+				v = jdao.selectAll("ORDER BY posicao, nomeJogador");
 				jdao.closeDataBase();
 				ArrayList<Curso> curso = new ArrayList();
 				CursoDAO cdao = new CursoDAO();

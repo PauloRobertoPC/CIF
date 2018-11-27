@@ -332,7 +332,7 @@
 .janelaTexto h3{
 	color: #282828;
 	font-weight: bold;
-	margin-top: -75px;
+	margin-top: -65px;
 	margin-left: 50px;
 
 }
@@ -340,18 +340,17 @@
 .janelaTexto h4{
 	font-size: 20px;
 	margin-left: 50px;
-	margin-top: 0px;
 }
 
 .janelaTexto h5{
 	color: #006400;
 	font-weight: bold;
 	font-size: 20px;
-	margin-top: 00px;
+	margin-top: -50px;
 	text-align: left;
-	margin-left: 50px;
+	margin-left: 180px;
 
-	margin-bottom: 10px;
+	margin-bottom: 40px;
 }
 
 .rodapeJanelaTXT{
@@ -602,25 +601,24 @@
 .janelaVerLiga h3{
 	color: #282828;
 	font-weight: bold;
-	margin-top: -75px;
+	margin-top: -65px;
 	margin-left: 50px;
 }
 
 .janelaVerLiga h4{
 	font-size: 20px;
-	margin-left: 50px;
-	margin-top: 0px;
+	margin-left: 52px;
 }
 
 .janelaVerLiga h5{
 	color: #006400;
 	font-weight: bold;
 	font-size: 20px;
-	margin-top: 00px;
+	margin-top: -50px;
 	text-align: left;
-	margin-left: 50px;
+	margin-left: 180px;
 
-	margin-bottom: 10px;
+	margin-bottom: 40px;
 }
 
 .tabelaLiga{
@@ -805,116 +803,192 @@ table#alter tr.dif td {
 
 @media screen and (max-width: 2000px) {
 	#pivo{
-		position:absolute;z-index: 1px; top:30%; left:45%;
+		position:absolute;z-index: 1px; top:300px; left:45%;
 	}
 
 	#alae{
-		position:absolute;z-index: 10px; top:50%; left:11%;
+		position:absolute;z-index: 10px; top:480px; left:11%;
 	}
 
 	#alad{
-		position:absolute;z-index: 10px; top:50%; left:70%;
+		position:absolute;z-index: 10px; top:480px; left:70%;
 	}
 
 	#fixo{
-		position:absolute;z-index: 10px; top:60%; left:45%;
+		position:absolute;z-index: 10px; top:600px; left:45%;
 	}
 
 	#goleiro{
-		position:absolute;z-index: 10px; top:75%; left:42%;
+		position:absolute;z-index: 10px; top:700px; left:42%;
 	}
 
 	#tecnico{
-		position:absolute;z-index: 10px; top:77%; left:8%;
+		position:absolute;z-index: 10px; top:750px; left:8%;
 	}
 }
 
-@media screen and (max-width: 1210px) {
+@media screen and (max-width: 1500px) {
 	#pivo{
-		position:absolute;z-index: 1px; top:30%; left:45%;
+		position:absolute;z-index: 1px; top:270px; left:45%;
 	}
 
 	#alae{
-		position:absolute;z-index: 10px; top:45%; left:11%;
+		position:absolute;z-index: 10px; top:420px; left:11%;
 	}
 
 	#alad{
-		position:absolute;z-index: 10px; top:45%; left:68%;
+		position:absolute;z-index: 10px; top:420px; left:70%;
 	}
 
 	#fixo{
-		position:absolute;z-index: 10px; top:54%; left:45%;
+		position:absolute;z-index: 10px; top:530px; left:45%;
 	}
 
 	#goleiro{
-		position:absolute;z-index: 10px; top:65%; left:42%;
+		position:absolute;z-index: 10px; top:630px; left:42%;
 	}
 
 	#tecnico{
-		position:absolute;z-index: 10px; top:68%; left:8%;
+		position:absolute;z-index: 10px; top:680px; left:8%;
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	#pivo{
+		position:absolute;z-index: 1px; top:270px; left:45%;
+	}
+
+	#alae{
+		position:absolute;z-index: 10px; top:415px; left:11%;
+	}
+
+	#alad{
+		position:absolute;z-index: 10px; top:415px; left:70%;
+	}
+
+	#fixo{
+		position:absolute;z-index: 10px; top:500px; left:45%;
+	}
+
+	#goleiro{
+		position:absolute;z-index: 10px; top:600px; left:42%;
+	}
+
+	#tecnico{
+		position:absolute;z-index: 10px; top:650px; left:8%;
+	}
+}
+
+@media screen and (max-width: 1350px) {
+	#pivo{
+		position:absolute;z-index: 1px; top:260px; left:45%;
+	}
+
+	#alae{
+		position:absolute;z-index: 10px; top:400px; left:11%;
+	}
+
+	#alad{
+		position:absolute;z-index: 10px; top:400px; left:70%;
+	}
+
+	#fixo{
+		position:absolute;z-index: 10px; top:480px; left:45%;
+	}
+
+	#goleiro{
+		position:absolute;z-index: 10px; top:580px; left:42%;
+	}
+
+	#tecnico{
+		position:absolute;z-index: 10px; top:630px; left:8%;
+	}
+}
+
+@media screen and (max-width: 1290px) {
+	#pivo{
+		position:absolute;z-index: 1px; top:250px; left:45%;
+	}
+
+	#alae{
+		position:absolute;z-index: 10px; top:380px; left:11%;
+	}
+
+	#alad{
+		position:absolute;z-index: 10px; top:380px; left:68%;
+	}
+
+	#fixo{
+		position:absolute;z-index: 10px; top:460px; left:45%;
+	}
+
+	#goleiro{
+		position:absolute;z-index: 10px; top:550px; left:42%;
+	}
+
+	#tecnico{
+		position:absolute;z-index: 10px; top:590px; left:8%;
 	}
 
 }
 
-@media screen and (max-width: 1130px) {
+@media screen and (max-width: 1240px) {
 	#pivo{
-		position:absolute;z-index: 1px; top:25%; left:45%;
+		position:absolute;z-index: 1px; top:240px; left:45%;
 	}
 
 	#alae{
-		position:absolute;z-index: 10px; top:40%; left:11%;
+		position:absolute;z-index: 10px; top:365px; left:11%;
 	}
 
 	#alad{
-		position:absolute;z-index: 10px; top:40%; left:68%;
+		position:absolute;z-index: 10px; top:365px; left:68%;
 	}
 
 	#fixo{
-		position:absolute;z-index: 10px; top:48%; left:45%;
+		position:absolute;z-index: 10px; top:440px; left:45%;
 	}
 
 	#goleiro{
-		position:absolute;z-index: 10px; top:60%; left:42%;
+		position:absolute;z-index: 10px; top:530px; left:42%;
 	}
 
 	#tecnico{
-		position:absolute;z-index: 10px; top:63%; left:8%;
+		position:absolute;z-index: 10px; top:570px; left:8%;
 	}
 
 }
 
-
-
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 1190px) {
 	#pivo{
-		position:absolute;z-index: 1px; top:25%; left:42%;
+		position:absolute;z-index: 1px; top:230px; left:45%;
 	}
-	
+
 	#alae{
-		position:absolute;z-index: 10px; top:38%; left:11%;
+		position:absolute;z-index: 10px; top:360px; left:11%;
 	}
 
 	#alad{
-		position:absolute;z-index: 10px; top:38%; left:66%;
+		position:absolute;z-index: 10px; top:360px; left:68%;
 	}
 
 	#fixo{
-		position:absolute;z-index: 10px; top:45%; left:42%;
+		position:absolute;z-index: 10px; top:430px; left:45%;
 	}
 
 	#goleiro{
-		position:absolute;z-index: 10px; top: 56%; left:40%;
+		position:absolute;z-index: 10px; top:510px; left:42%;
 	}
 
 	#tecnico{
-		position:absolute;z-index: 10px; top:58%; left:8%;
+		position:absolute;z-index: 10px; top:550px; left:8%;
 	}
 
 	.fotopequena{
 		background-color: #aaa;
 		border-radius: 50%;
-		width: 70px;
-		height: 70px;
+		width: 68px;
+		height: 68px;
 		overflow: hidden;
 		position: relative;
 		margin-top: 0px;
@@ -933,8 +1007,144 @@ table#alter tr.dif td {
 	.fotopequenaT{
 		background-color: #006400;
 		border-radius: 50%;
-		width: 70px;
-		height: 70px;
+		width: 68px;
+		height: 68px;
+		overflow: hidden;
+		position: relative;
+		margin-top: 0px;
+		margin-left: 0px;
+		border: solid #00b300 2px;
+		box-shadow: 0px 0px 10px #000;
+
+	}
+
+	.fotopequenaT img{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+
+
+}
+
+@media screen and (max-width: 1140px) {
+	#pivo{
+		position:absolute;z-index: 1px; top:220px; left:45%;
+	}
+
+	#alae{
+		position:absolute;z-index: 10px; top:340px; left:11%;
+	}
+
+	#alad{
+		position:absolute;z-index: 10px; top:340px; left:68%;
+	}
+
+	#fixo{
+		position:absolute;z-index: 10px; top:410px; left:45%;
+	}
+
+	#goleiro{
+		position:absolute;z-index: 10px; top:500px; left:42%;
+	}
+
+	#tecnico{
+		position:absolute;z-index: 10px; top:530px; left:8%;
+	}
+
+	.fotopequena{
+		background-color: #aaa;
+		border-radius: 50%;
+		width: 65px;
+		height: 65px;
+		overflow: hidden;
+		position: relative;
+		margin-top: 0px;
+		margin-left: 0px;
+		border: solid #fff 2px;
+		box-shadow: 0px 0px 10px #000;
+
+	}
+
+	.fotopequena img{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+
+	.fotopequenaT{
+		background-color: #006400;
+		border-radius: 50%;
+		width: 65px;
+		height: 65px;
+		overflow: hidden;
+		position: relative;
+		margin-top: 0px;
+		margin-left: 0px;
+		border: solid #00b300 2px;
+		box-shadow: 0px 0px 10px #000;
+
+	}
+
+	.fotopequenaT img{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+
+}
+
+
+@media screen and (max-width: 1090px) {
+	#pivo{
+		position:absolute;z-index: 1px; top:220px; left:42%;
+	}
+	
+	#alae{
+		position:absolute;z-index: 10px; top:325px; left:11%;
+	}
+
+	#alad{
+		position:absolute;z-index: 10px; top:325px; left:66%;
+	}
+
+	#fixo{
+		position:absolute;z-index: 10px; top:400px; left:42%;
+	}
+
+	#goleiro{
+		position:absolute;z-index: 10px; top: 470px; left:40%;
+	} 
+
+	#tecnico{
+		position:absolute;z-index: 10px; top:500px; left:8%;
+	}
+
+	.fotopequena{
+		background-color: #aaa;
+		border-radius: 50%;
+		width: 60px;
+		height: 60px;
+		overflow: hidden;
+		position: relative;
+		margin-top: 0px;
+		margin-left: 0px;
+		border: solid #fff 2px;
+		box-shadow: 0px 0px 10px #000;
+
+	}
+
+	.fotopequena img{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+
+	.fotopequenaT{
+		background-color: #006400;
+		border-radius: 50%;
+		width: 60px;
+		height: 60px;
 		overflow: hidden;
 		position: relative;
 		margin-top: 0px;
@@ -950,6 +1160,139 @@ table#alter tr.dif td {
 		width: 100%;
 	}
 }
+
+@media screen and (max-width: 1040px) {
+	#pivo{
+		position:absolute;z-index: 1px; top:210px; left:42%;
+	}
+	
+	#alae{
+		position:absolute;z-index: 10px; top:315px; left:11%;
+	}
+
+	#alad{
+		position:absolute;z-index: 10px; top:315px; left:66%;
+	}
+
+	#fixo{
+		position:absolute;z-index: 10px; top:380px; left:42%;
+	}
+
+	#goleiro{
+		position:absolute;z-index: 10px; top: 450px; left:40%;
+	}
+
+	#tecnico{
+		position:absolute;z-index: 10px; top:490px; left:8%;
+	}
+
+	.fotopequena{
+		background-color: #aaa;
+		border-radius: 50%;
+		width: 60px;
+		height: 60px;
+		overflow: hidden;
+		position: relative;
+		margin-top: 0px;
+		margin-left: 0px;
+		border: solid #fff 2px;
+		box-shadow: 0px 0px 10px #000;
+
+	}
+
+	.fotopequena img{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+
+	.fotopequenaT{
+		background-color: #006400;
+		border-radius: 50%;
+		width: 60px;
+		height: 60px;
+		overflow: hidden;
+		position: relative;
+		margin-top: 0px;
+		margin-left: 0px;
+		border: solid #00b300 2px;
+		box-shadow: 0px 0px 10px #000;
+
+	}
+
+	.fotopequenaT img{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	#pivo{
+		position:absolute;z-index: 1px; top:200px; left:42%;
+	}
+	
+	#alae{
+		position:absolute;z-index: 10px; top:310px; left:11%;
+	}
+
+	#alad{
+		position:absolute;z-index: 10px; top:310px; left:66%;
+	}
+
+	#fixo{
+		position:absolute;z-index: 10px; top:370px; left:42%;
+	}
+
+	#goleiro{
+		position:absolute;z-index: 10px; top: 440px; left:40%;
+	}
+
+	#tecnico{
+		position:absolute;z-index: 10px; top:480px; left:8%;
+	}
+
+	.fotopequena{
+		background-color: #aaa;
+		border-radius: 50%;
+		width: 60px;
+		height: 60px;
+		overflow: hidden;
+		position: relative;
+		margin-top: 0px;
+		margin-left: 0px;
+		border: solid #fff 2px;
+		box-shadow: 0px 0px 10px #000;
+
+	}
+
+	.fotopequena img{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+
+	.fotopequenaT{
+		background-color: #006400;
+		border-radius: 50%;
+		width: 60px;
+		height: 60px;
+		overflow: hidden;
+		position: relative;
+		margin-top: 0px;
+		margin-left: 0px;
+		border: solid #00b300 2px;
+		box-shadow: 0px 0px 10px #000;
+
+	}
+
+	.fotopequenaT img{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+}
+
 @media screen and (max-width: 991px) {
 	#pivo{
 		position:absolute;z-index: 1px; top:35%; left:45%;
@@ -1104,57 +1447,6 @@ table#alter tr.dif td {
 		border: 1px solid #C0C0C0;
 		border-bottom: solid #808080 2.2px;
 	}
-
-	.janelaTexto h3{
-		color: #282828;
-		font-weight: bold;
-		margin-top: -65px;
-		margin-left: 50px;
-
-	}
-
-	.janelaTexto h4{
-		font-size: 20px;
-		margin-left: 50px;
-	}
-
-
-	.janelaTexto h5{
-		color: #006400;
-		font-weight: bold;
-		font-size: 20px;
-		margin-top: -65px;
-		text-align: left;
-		margin-left: 220px;
-
-		margin-bottom: 40px;
-	}
-
-	
-	.janelaVerLiga h3{
-		color: #282828;
-		font-weight: bold;
-		margin-top: -75px;
-		margin-left: 50px;
-	}
-
-	.janelaVerLiga h4{
-		font-size: 20px;
-		margin-left: 50px;
-		margin-top: 0px;
-	}
-
-	.janelaVerLiga h5{
-		color: #006400;
-		font-weight: bold;
-		font-size: 20px;
-		margin-top: 00px;
-		text-align: left;
-		margin-left: 50px;
-
-		margin-bottom: 10px;
-	}
-
 }
 
 @media screen and (max-width: 414px) {

@@ -261,8 +261,6 @@
           </div>
         </div>
       </div>
-
-
       <div class="footer">
         Todos os direitos reservados.| Desenvolvido por <a href="https://www.instagram.com/douglasm.jpg/" target="_blank">Erick Douglas</a> e <a href="https://www.instagram.com/_paulinc3/" target="_blank">Paulo Roberto.</a>
       </div>

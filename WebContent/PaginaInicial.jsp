@@ -203,7 +203,7 @@
             lista = jd.top3Escalados(util.rodadaCorrente() - 1);
             if(lista.isEmpty()){
             	out.println("<div class=' container col-sm-12 col-lg-8 col-xl-8'>");
-                out.println("<h2>TOP 3 JOGADORES MAIS ESCALADOS DA RODADA</h2>");
+                out.println("<h2>TOP 3 MAIS ESCALADOS DA RODADA</h2>");
                 out.println("<div class='janelaVazia'>");
                 out.println("<center><img src='imagens/icones/Vazio.png'  height='100px' width='100px' style='margin-top: 30px;'></center>");
                 out.println("<center><div class='texto'>Ainda sem dados!</div> </center>");
@@ -213,7 +213,7 @@
                 out.println("</div>");
             }else{
             	out.println("<div class=' container col-sm-12 col-lg-8 col-xl-8'>");
-                out.println("<h2>TOP 3 JOGADORES MAIS ESCALADOS DA RODADA</h2>");
+                out.println("<h2>TOP 3 MAIS ESCALADOS DA RODADA</h2>");
                 out.println("<div class='janelaImagem'>");
                 int c = 0;
                 while(c < lista.size()){
