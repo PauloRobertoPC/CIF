@@ -266,14 +266,17 @@ public class JogadorDAO {
     }
    
     public Top papaPonto(){
-        String sql = "select jogadores.nomeJogador, jogadores.imagem, sum(rodadaJogador.pontuacao) as pontuacao, jogadores.idJogador from jogadores, rodadaJogador where (jogadores.idJogador = rodadaJogador.idJogador) and (jogadores.posicao != 'Técnico') group by(jogadores.nomeJogador) order by (pontuacao) desc limit 1";
+        String sql = "select jogadores.nomeJogador, jogadores.imagem, (sum(rodadaJogador.pontuacao)/(select count(*) as total from rodadaJogador where (idJogador = jogadores.idJogador))) as pontuacao, jogadores.idJogador from jogadores, rodadaJogador \r\n" + 
+        		"where (jogadores.idJogador = rodadaJogador.idJogador) and (jogadores.posicao != 'Técnico') \r\n" + 
+        		"group by(jogadores.nomeJogador) \r\n" + 
+        		"order by (pontuacao) desc LIMIT 1";
         PreparedStatement stmt = null;
         ResultSet rs = null;
         try{
             stmt = conn.prepareStatement(sql);
             rs = stmt.executeQuery();
             rs.next();
-            Top t =  new Top (rs.getString("nomeJogador"), rs.getString("imagem"), (rs.getInt("pontuacao")/this.totalDeRodadasParticipantes(rs.getInt("idJogador"))), rs.getInt("idJogador"));
+            Top t =  new Top (rs.getString("nomeJogador"), rs.getString("imagem"), rs.getInt("pontuacao"), rs.getInt("idJogador"));
             return t;
         }catch(SQLException ex){
             System.err.println("Erro: "+ ex);

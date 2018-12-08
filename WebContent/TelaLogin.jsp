@@ -130,14 +130,20 @@
 </script>
 	<%
 		if (modal != null) {
-			if (modal.equals("3")) {
+			if ((modal.equals("3")) || (modal.equals("4"))) {
 	%>
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
 		aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-header"></div>
-				<div class="modal-body">Usuário cadastrado com sucesso!</div>
+				<% 
+					if(modal.equals("3")){
+						out.println("<div class='modal-body'>Usuário cadastrado com sucesso!</div>");
+					}else if(modal.equals("4")){
+						out.println("<div class='modal-body'>Cheque sua senha no seu email!</div>");
+					}
+				%>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-info" data-dismiss="modal">Fechar</button>
 				</div>

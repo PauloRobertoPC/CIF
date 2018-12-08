@@ -31,6 +31,14 @@
                 <form method="post" action="RecuperarSenha">		
                   <label for="exampleFormControlInput1">Insira o e-mail cadastrado para enviarmos sua senha:</label>
                   <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email" name="email">
+                  <%
+                  	String modal = request.getParameter("modal");
+                  	if(modal != null){
+                  		if(modal.equals("1")){
+                  			out.println("<span style='color: red;'>Email não cadastrado!</span><br>");
+                  		}
+                  	}
+                  %>
                 </div>
                 <button type="submit" class="botaoVerde btn btn-success btn-block" >Enviar</button>
                 </form>

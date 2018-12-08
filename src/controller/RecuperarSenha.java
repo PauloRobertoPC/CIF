@@ -76,7 +76,7 @@ public class RecuperarSenha extends HttpServlet {
 		 
 		                message.setRecipients(Message.RecipientType.TO, toUser);
 		                message.setSubject("Recuperação de email Cartola IF");//Assunto
-		                message.setText("Sua senha é: "+u.getSenha()+"\nPara mudar sua senha acesse o seu perfil depois de logado.");
+		                message.setText("Olá "+u.getNomeCartoleiro()+", dono do time "+u.getNomeTime()+".\nSeu login é "+u.getLogin()+".\nSua senha é "+u.getSenha()+".\nO seu time lhe espera. Bom jogo!");
 		                Transport.send(message);
 		                ud.closeDataBase();
 		                response.sendRedirect("TelaLogin.jsp?modal=4");

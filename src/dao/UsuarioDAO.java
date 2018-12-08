@@ -312,9 +312,9 @@ public class UsuarioDAO {
     }*/
     
     public Top mestreDoCampeonato(){
-        String sql = "select usuarios.idUsuario, sum(rodadaJogador.pontuacao) as total from usuarios, timeRodada, rodadajogador\n" +
-                     "where (usuarios.idUsuario = timeRodada.idUsuario) and (timeRodada.idJogador = rodadaJogador.idJogador) and (timeRodada.idRodada = rodadaJogador.idRodada)\n" +
-                     "group by (timeRodada.idUsuario)";
+        String sql = "select usuarios.idUsuario, sum(rodadaJogador.pontuacao) as total from usuarios, timeRodada, rodadajogador\r\n" + 
+        		"where (usuarios.idUsuario = timeRodada.idUsuario) and (timeRodada.idJogador = rodadaJogador.idJogador) and (timeRodada.idRodada = rodadaJogador.idRodada)\r\n" + 
+        		"group by (timeRodada.idUsuario) ORDER BY (total) DESC LIMIT 1";
         PreparedStatement stmt = null;
         ResultSet rs = null;
         int idMaior = 0;
@@ -323,13 +323,12 @@ public class UsuarioDAO {
             RodadaDAO r = new RodadaDAO();
             stmt = conn.prepareStatement(sql);
             rs = stmt.executeQuery();
-            int rodadas = r.totalRodadas() - 1;
+            int rodadas = r.totalRodadas();
             r.closeDataBase();
             while(rs.next()){
-                if((rs.getFloat("total")/rodadas) > pontuacaoMaior){
+                
                     idMaior = rs.getInt("idUsuario");
                     pontuacaoMaior = (rs.getInt("total")/rodadas);
-                }
             }
             Usuario u = this.selectAll("WHERE idUsuario = '"+idMaior+"'").get(0);
             Top t = new Top(u.getNomeCartoleiro(), u.getNomeTime(),pontuacaoMaior);
