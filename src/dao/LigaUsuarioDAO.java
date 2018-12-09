@@ -89,7 +89,7 @@ public class LigaUsuarioDAO {
     }
     
     public int totalParticipantes(int liga) {
-    	String sql = "select count(*) as total from ligausuario where idLiga = '"+liga+"'";
+    	String sql = "select count(*) as total from ligaUsuario where idLiga = '"+liga+"'";
     	PreparedStatement stmt = null;
         ResultSet rs = null;
         try{

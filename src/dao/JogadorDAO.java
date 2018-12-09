@@ -150,7 +150,7 @@ public class JogadorDAO {
     }
     
     public ArrayList<Top> topRodada(int rodada){
-        String sql = "select jogadores.nomeJogador, jogadores.imagem,rodadaJogador.pontuacao, jogadores.idJogador from jogadores, rodadaJogador\n" +
+        String sql = "select jogadores.nomeJogador, jogadores.imagem, rodadaJogador.pontuacao, jogadores.idJogador from jogadores, rodadaJogador\n" +
                      "where (jogadores.idJogador = rodadaJogador.idJogador) and (rodadaJogador.idRodada = "+rodada+") and (jogadores.posicao != 'Técnico')\n" +
                      "group by(jogadores.nomeJogador)\n" +
                      "order by pontuacao desc";
@@ -285,7 +285,7 @@ public class JogadorDAO {
     }
     
     public Top popularidade() throws SQLException{
-        String sql = "select timeRodada.idJogador, count(*) as total from timeRodada, jogadores WHERE (timerodada.idJogador = jogadores.idJogador) and (jogadores.posicao != 'Técnico') group by (idJogador)";
+        String sql = "select timeRodada.idJogador, count(*) as total from timeRodada, jogadores WHERE (timeRodada.idJogador = jogadores.idJogador) and (jogadores.posicao != 'Técnico') group by (idJogador)";
         PreparedStatement stmt = null;
         ResultSet rs = null;
         int idMaior = 0;

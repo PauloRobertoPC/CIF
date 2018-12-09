@@ -123,7 +123,7 @@ public class UsuarioDAO {
         }
     }
     public ArrayList<Top> mediaCampeonato() throws ParseException{
-        String sql = "select usuarios.nomeCartoleiro, usuarios.nomeTime, usuarios.idUsuario , sum(rodadaJogador.pontuacao) as total from usuarios, timeRodada, rodadajogador\n" +
+        String sql = "select usuarios.nomeCartoleiro, usuarios.nomeTime, usuarios.idUsuario , sum(rodadaJogador.pontuacao) as total from usuarios, timeRodada, rodadaJogador\n" +
                     "where (usuarios.idUsuario = timeRodada.idUsuario) and (timeRodada.idJogador = rodadaJogador.idJogador) and (timeRodada.idRodada = rodadaJogador.idRodada)\n" +
                     "group by (timeRodada.idUsuario) order by (total) desc";
         PreparedStatement stmt = null;
@@ -220,7 +220,7 @@ public class UsuarioDAO {
     }
     
     public int totalDeLigasParticipantes(int id){
-        String sql = "select count(*) as total from ligausuario where (idUsuario = "+id+")";
+        String sql = "select count(*) as total from ligaUsuario where (idUsuario = "+id+")";
         PreparedStatement stmt = null;
         ResultSet rs = null;
         try{
@@ -236,8 +236,8 @@ public class UsuarioDAO {
     }
     
     public ArrayList<Top> top3Rodada(int rodada){
-        String sql = "select usuarios.nomeCartoleiro, usuarios.nomeTime,sum(rodadajogador.pontuacao) as pontuacao from usuarios, jogadores, rodadajogador, timerodada\n" +
-                     "where (usuarios.idUsuario = timerodada.idUsuario) and (jogadores.idJogador = timerodada.idJogador) and (rodadaJogador.idJogador = timerodada.idJogador) and (rodadaJogador.idRodada = '"+rodada+"') and (timeRodada.idRodada = '"+rodada+"')\n" +
+        String sql = "select usuarios.nomeCartoleiro, usuarios.nomeTime,sum(rodadaJogador.pontuacao) as pontuacao from usuarios, jogadores, rodadajogador, timeRodada\n" +
+                     "where (usuarios.idUsuario = timeRodada.idUsuario) and (jogadores.idJogador = timeRodada.idJogador) and (rodadaJogador.idJogador = timeRodada.idJogador) and (rodadaJogador.idRodada = '"+rodada+"') and (timeRodada.idRodada = '"+rodada+"')\n" +
                      "group by usuarios.nomeUsuario order by pontuacao desc;";
         PreparedStatement stmt = null;
         ResultSet rs = null;
@@ -263,8 +263,8 @@ public class UsuarioDAO {
     }
     
     public ArrayList<Top> topTimes(int rodada){
-        String sql = "select usuarios.nomeCartoleiro, usuarios.nomeTime,sum(rodadajogador.pontuacao) as pontuacao from usuarios, jogadores, rodadajogador, timerodada\n" +
-                     "where (usuarios.idUsuario = timerodada.idUsuario) and (jogadores.idJogador = timerodada.idJogador) and (rodadaJogador.idJogador = timerodada.idJogador) and (rodadaJogador.idRodada = '"+rodada+"') and (timeRodada.idRodada = '"+rodada+"')\n" +
+        String sql = "select usuarios.nomeCartoleiro, usuarios.nomeTime, sum(rodadaJogador.pontuacao) as pontuacao from usuarios, jogadores, rodadaJogador, timeRodada\n" +
+                     "where (usuarios.idUsuario = timeRodada.idUsuario) and (jogadores.idJogador = timeRodada.idJogador) and (rodadaJogador.idJogador = timeRodada.idJogador) and (rodadaJogador.idRodada = '"+rodada+"') and (timeRodada.idRodada = '"+rodada+"')\n" +
                      "group by usuarios.nomeUsuario order by pontuacao desc;";
         PreparedStatement stmt = null;
         ResultSet rs = null;
@@ -312,7 +312,7 @@ public class UsuarioDAO {
     }*/
     
     public Top mestreDoCampeonato(){
-        String sql = "select usuarios.idUsuario, sum(rodadaJogador.pontuacao) as total from usuarios, timeRodada, rodadajogador\r\n" + 
+        String sql = "select usuarios.idUsuario, sum(rodadaJogador.pontuacao) as total from usuarios, timeRodada, rodadaJogador\r\n" + 
         		"where (usuarios.idUsuario = timeRodada.idUsuario) and (timeRodada.idJogador = rodadaJogador.idJogador) and (timeRodada.idRodada = rodadaJogador.idRodada)\r\n" + 
         		"group by (timeRodada.idUsuario) ORDER BY (total) DESC LIMIT 1";
         PreparedStatement stmt = null;
@@ -340,7 +340,7 @@ public class UsuarioDAO {
     }
     
     public ArrayList<Top> timeRodada(int idU, int idR){
-        String sql = "select jogadores.imagem, jogadores.posicao, jogadores.cursoJogador, rodadajogador.pontuacao from timerodada, jogadores, rodadajogador, usuarios\n" +
+        String sql = "select jogadores.imagem, jogadores.posicao, jogadores.cursoJogador, rodadaJogador.pontuacao from timeRodada, jogadores, rodadaJogador, usuarios\n" +
                      "where (timeRodada.idJogador = rodadaJogador.idJogador) and (jogadores.idJogador = timeRodada.idJogador) and (jogadores.idJogador = rodadaJogador.idJogador)\n" +
                       "and (timeRodada.idUsuario = usuarios.idUsuario) and (rodadaJogador.idRodada = '"+idR+"') and (timeRodada.idUsuario = "+idU+") and (timeRodada.idRodada = "+idR+")";
         PreparedStatement stmt = null;
